@@ -1,11 +1,21 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <TheHeader/>
+    <!-- <router-link to="/">Home</router-link> | -->
   </div>
   <router-view/>
 </template>
+<script lang="ts">
+import { defineComponent } from 'vue';
+import TheHeader from '@/components/Navigation/TheHeader.vue'; // @ is an alias to /src
 
+export default defineComponent({
+  name: 'Home',
+  components: {
+    TheHeader,
+  },
+});
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
