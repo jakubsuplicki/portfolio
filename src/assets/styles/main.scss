@@ -1,0 +1,63 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+    font-size: 62.5%; //1rem = 10px; 10px/16px = 62.6%
+
+    @include respond(tab-port) {
+        font-size: 70%;
+    }
+
+    @include respond(tab-land) {
+        font-size: 72.5%;
+    }
+
+    // @include respond(standard-pc) {
+    //   font-size: 90.625%; //1rem = 14.5px; 14.5px/16px = 90.625%
+    // }
+    // @include respond(big-pc) {
+    //   font-size: 100%;    //1rem = 16px; 16px/16px = 100%
+    // }
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  -webkit-tap-highlight-color: transparent;
+  color: $color-light;
+}
+input,
+textarea,
+button,
+select,
+a {
+  font-family: 'Poppins', sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  border: none;
+  background-color: transparent;
+  font-size: 1.4rem;
+  outline: none;
+}
+h1 {
+  font-size: 1.6rem;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+button {
+  cursor: pointer;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
