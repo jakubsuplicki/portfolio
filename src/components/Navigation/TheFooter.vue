@@ -28,7 +28,7 @@ export default defineComponent({
   height: 6rem;
   justify-content: center;
   @include respond(tab-land) {
-    height: 10rem;
+    height: 8rem;
   }
   &__contact {
     width: 100%;

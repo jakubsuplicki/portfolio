@@ -41,6 +41,9 @@ export default defineComponent({
         font-size: 3rem;
         top: 1rem;
         right: 1rem;
+        @include respond(tab-port) {
+            display: none;
+        }
     }
     &__image {
         margin-top: 7rem;
@@ -49,6 +52,9 @@ export default defineComponent({
             border-radius: 100%;
             width: 15rem;
             height: 15rem;
+        }
+        @include respond(tab-port) {
+            margin-top: 5rem;
         }
     }
     &__name {

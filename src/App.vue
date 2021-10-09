@@ -4,7 +4,7 @@
     <TheHeader class="navigation"/>
   </div>
   <div class="inner-container__body">
-    <div class="main">
+    <div class="main" :class="{show_scroll: $store.getters.getSelection!=='landing' && $store.getters.getSelection!=='about'}">
       <router-view />
     </div>
   </div>
@@ -48,23 +48,21 @@ export default defineComponent({
   display: flex;
   align-items: center;
 }
+.show_scroll {
+  overflow-y: scroll !important;
+}
 .main {
-  display: flex;
-  align-items: center;
   max-width: $max-width;
   width: 100%;
   position: relative;
-  min-height: calc(100vh - 12rem);
-  // background-color: $color-main;
-  // background-image: linear-gradient(190deg, $color-main, $color-light);
-  // background: linear-gradient(120deg, $color-main 50%, $color-light 50%);
+  height: calc(100vh - 12rem);
   background-image: url('~@/assets/images/bg_main.jpg');
   background-size: cover;
   background-repeat:no-repeat;
-  background-position: center center;
-
+  background-position: 0% 15%;
+  overflow: hidden;
   @include respond(tab-land) {
-    min-height: calc(100vh - 16rem);
+    height: calc(100vh - 14rem);
     border-radius: $radius-main;
   }
 }

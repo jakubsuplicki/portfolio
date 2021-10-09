@@ -3,14 +3,10 @@
         <div class="about">
             <span @click="$store.commit('changeSelection', 'landing')" class="about__landing"><font-awesome-icon :icon="['fas', 'arrow-left']" /></span>
             <div class="about__container">
-                <h1>Hi,</h1>
-                <p>An ambitious, people orientated person with over one year of professional experience and a
-                Bachelor of Information Technology from Melbourne Polytechnic. With a high academic
-                average and a passion for working on complex and engaging projects to constantly
-                challenge my expertise.</p> 
-                <p>It’s an ambition of mine to work towards becoming the finest
-                programmer possible. My critical problem-solving skills are well developed and help me
-                deliver new perspectives and solutions to the challenges that I encounter.</p>
+                <p> An ambitious people-oriented full stack developer, with a passion for working on complex and engaging projects in a time-sensitive and fast-paced work environment. 
+                    Professional experience of over 3 years in designing, testing, automating, integrating, and deploying enterprise applications.</p> 
+                <p>An excellent communicator and problem-solver, with the ability to grasp complex systems, identify opportunities for improvements and resolve critical issues. 
+                    Enjoys collaborating with technical and non-technical stakeholders to provide business value at startup speed.</p>
             </div>
         </div>
     </div>
@@ -49,9 +45,9 @@ export default defineComponent({
         position: relative;
         font-size: 3rem;
         margin-bottom: 1rem;
-    }
-    &__container {
-        margin-top: 2rem;
+        @include respond(tab-port) {
+            display: none;
+        }
     }
 }
 </style>

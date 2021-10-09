@@ -80,6 +80,7 @@ export default defineComponent({
     }
     &__body {
       position: relative;
+      overflow-y: scroll;
     }
   }
   .btn-close {

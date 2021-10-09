@@ -12,7 +12,7 @@
       class="flip__each flip__each--back" 
       key="about">
         <the-about :class="{'flip__each--content-flip': $store.getters.getSelection==='landing'}" class="flip__each--content"/>
-        <the-contact />
+        <the-contact class="flip__contact-about" />
       </div>
     </div>
 </template>
@@ -50,7 +50,13 @@ export default defineComponent({
   margin: 2rem 0;
   transform-style: preserve-3d;
   z-index:1;
+  @include respond(tab-port) {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
   &__each {
+    border-radius: $radius-main;
     position: absolute;
     width:100%;
     height:100%;
@@ -64,15 +70,25 @@ export default defineComponent({
       backface-visibility: hidden;
 			overflow: hidden;
 			position:absolute;
-			top:0;
+      top:0;
+      @include respond(tab-port) {
+        position: relative;
+        max-width: 30rem;
+      }
     }
     &--front {
 			transform: rotateY(0deg);
-			z-index:1;
+      z-index:1;
+      @include respond(tab-port) {
+        transform: rotateY(10deg);
+      }
     }
     &--back {
       transform: rotateY(180deg);
-			z-index:1;
+      z-index:1;
+      @include respond(tab-port) {
+        transform: rotateY(-10deg);
+      }
     }
     &--rotate-front {
 			transform: rotateY(-180deg);
@@ -88,6 +104,14 @@ export default defineComponent({
     }
     &--content-flip {
       transform: translateX(-20rem) scale(.85);
+      @include respond(tab-port) {
+        transform: none;
+      }
+    }
+  }
+  &__contact-about {
+    @include respond(tab-port) {
+      display: none;
     }
   }
 }

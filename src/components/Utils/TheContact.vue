@@ -69,14 +69,17 @@ export default defineComponent({
         font-size: 2.3rem;
         display: block;
         z-index: 1;
+        cursor: pointer;
     }
     p {
         font-size: 1.6rem;
     }
     &--phone-icon {
+        cursor: pointer;
         left: 2rem;
     }
     &--email-icon {
+        cursor: pointer;
         right: 2rem;
     }
     &--center-text {

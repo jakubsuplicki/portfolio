@@ -30,10 +30,9 @@ export default defineComponent({
     align-items: center;
     transition: background-image .3s ease-in-out;
     background-image: url('~@/assets/images/bg_main.jpg');
-    background-repeat:no-repeat;
-    background-position: center center;
     background-size: cover;
-    // background-image: linear-gradient(190deg, $color-bg-light, $color-bg-dark);
+    background-repeat:no-repeat;
+    background-position: 0% 5%;
     top:0;
     left: 0;
     height: 100vh;

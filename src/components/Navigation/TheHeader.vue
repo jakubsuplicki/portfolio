@@ -9,11 +9,10 @@
     </div>
     <div class="header__right">
       <ul class="header__navigation-list">
-        <li>Home</li>
-        <li>About Me</li>
-        <li>Resume</li>
-        <li>Projects</li>
-        <li>Contact</li>
+        <li @click="$store.commit('changeSelection', 'landing')">Home</li>
+        <li @click="$store.commit('changeSelection', 'about')">About Me</li>
+        <li @click="$store.commit('changeSelection', 'resume')">Resume</li>
+        <li @click="$store.commit('changeSelection', 'projects')">Projects</li>
       </ul>
       <div class="menu menu__closed" @click="isMobileMenu = !isMobileMenu" :class="{menu__active: isMobileMenu}">
         <div class="menu__line menu__top-line" :class="{'menu__top-line--active': isMobileMenu, 'menu__line--active': isMobileMenu}"></div>
@@ -44,9 +43,8 @@ export default defineComponent({
   data() {
     return {
       isMobileMenu: false,
-      titles: ['Full Stack Developer', 'Frontend Developer', 'Witcher Fanboy',
-      'Backend developer', 'Tech Geek', 'Database Designer', 'In House Dj',
-      'Cyclist'],
+      titles: ['Full Stack Developer', 'Tech Geek', 
+      'Cyclist', 'In House Dj'],
       currentTitle: ''
     }
   },
@@ -104,6 +102,7 @@ export default defineComponent({
   &__left {
     display: flex;
     align-items: center;
+    cursor: pointer;
       h1 {
         display: flex;
         align-items: center;

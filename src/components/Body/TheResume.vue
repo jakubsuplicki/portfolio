@@ -2,7 +2,7 @@
     <div class="resume">
         <div class="resume__intro">
             <h1>Resume</h1>
-            <a :href="`${publicPath}cv.pdf`" target="_blank">Open CV</a>
+            <!-- <a :href="`${publicPath}cv.pdf`" target="_blank">Open CV</a> -->
         </div>
         <div class="resume__outer-container">
             <h1 class="resume__main-heading"><span class="icon icon__heading"><font-awesome-icon :icon="['fas', 'cog']" /></span>
@@ -30,6 +30,66 @@
                     <li>Mongoose</li>
                     <li>MySQL</li>
                     <li>Oracle SQL</li>
+                </ul>
+                <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'tools']" /></span>
+                    Development Tools</h2>
+                <ul class="resume__inner-heading--list-single">
+                    <li>Ajax</li>
+                    <li>Axios</li>
+                    <li>AWS (EC2, Elastic Beanstalk, S3)</li>
+                    <li>FileZilla</li>
+                    <li>Git & GitHub</li>
+                    <li>GraphQL</li>
+                    <li>MongoDB Atlas</li>
+                    <li>Nginx</li>
+                    <li>RESTful API</li>
+                    <li>Postman</li>
+                    <li>PWA</li>
+                    <li>Service Workers</li>
+                    <li>Travis CI </li>
+                    <li>Webpack</li>
+                    <li>WordPress</li>
+                </ul>
+                <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'laptop']" /></span>
+                    Computer Software</h2>
+                <ul class="resume__inner-heading--list-single">
+                    <li>Visual Studio Code</li>
+                    <li>Photoshop</li>
+                    <li>Filezilla</li>
+                    <li>Postman</li>
+                </ul>
+                <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'desktop']" /></span>
+                    Operating Systems</h2>
+                <ul class="resume__inner-heading--list-single">
+                    <li>macOS</li>
+                    <li>Windows</li>
+                    <li>Linux (Ubuntu)</li>
+                </ul>
+                <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'project-diagram']" /></span>
+                    Visual Modelling</h2>
+                <ul class="resume__inner-heading--list-single">
+                    <li>Activity Diagram</li>
+                    <li>Workflow Diagram</li>
+                    <li>Sitemap Diagram</li>
+                    <li>Process Flow Diagram</li>
+                    <li>SWOT Analysis</li>
+                    <li>Flow Chart</li>
+                    <li>Use Case Diagram</li>
+                </ul>
+                <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'cube']" /></span>
+                    Testing</h2>
+                <ul class="resume__inner-heading--list-single">
+                    <li>System ingegration</li>
+                    <li>User acceptance</li>
+                </ul>
+                <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'layer-group']" /></span>
+                    Development Skills</h2>
+                <ul class="resume__inner-heading--list-single">
+                    <li>REST API Design</li>
+                    <li>User Experience</li>
+                    <li>Design (UI, UX, Prototyping)</li>
+                    <li>Relational Database System Development</li>
+                    <li>Non-Relational Database System Development</li>
                 </ul>
             </div>
         </div>
@@ -145,12 +205,12 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCode, faCog, faDatabase, faBriefcase, faKeyboard, faGraduationCap, 
 faMale, faLightbulb, faStamp, faMedal, faStar, faUserGraduate, faLaptopMedical, 
-faStopwatch, faEye, faHandSparkles, faBusinessTime } 
+faStopwatch, faEye, faHandSparkles, faBusinessTime, faTools, faDesktop, faLaptop, faProjectDiagram, faCube, faLayerGroup } 
 from '@fortawesome/free-solid-svg-icons'
 library.add(faCode, faCog, faDatabase, faBriefcase, 
 faKeyboard, faGraduationCap, faMale, faLightbulb, faStamp, 
 faMedal, faStar, faUserGraduate, faLaptopMedical, faStopwatch, 
-faEye, faHandSparkles, faBusinessTime)
+faEye, faHandSparkles, faBusinessTime, faTools, faDesktop, faLaptop, faProjectDiagram, faCube, faLayerGroup)
 
 import TheModal from '@/components/Utils/TheModal.vue';
 
@@ -171,15 +231,23 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .resume {
+    max-width: $max-width-content;
     padding: 1rem;
-    background: linear-gradient(0deg, rgb(255 255 255 / 70%) 0%, rgb(255 255 255 / 80%) 90%);    color: $color-main;
+    box-shadow: $shadow-element;
+    background: linear-gradient(0deg, rgb(255 255 255 / 70%) 0%, rgb(255 255 255 / 80%) 90%); color: $color-main;
+    @include respond(tab-port) {
+        margin: 3rem 0 3rem 0;
+        border-radius: $radius-main;
+        top: 0rem;
+        position: relative;
+    }
     &__intro {
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding: 1rem 0;
+        padding: 2rem 0;
         h1 {
             font-size: 2rem;
             letter-spacing: 0.2rem;
@@ -254,7 +322,7 @@ export default defineComponent({
             font-size: 1.3rem;
             color: $color-dark-gray;
             margin-left: 5rem;
-            margin-top: -1rem;
+            margin-top: -0.5rem;
             padding-bottom: 1rem;
         }
         &--list-single {
