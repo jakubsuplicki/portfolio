@@ -104,10 +104,6 @@
                     <span class="resume__inner-heading--date">October 2021 - Present</span>
                 </div>
             </div>
-        </div>   
-        <div class="resume__outer-container">
-            <h1 class="resume__main-heading"><span class="icon icon__heading"><font-awesome-icon :icon="['fas', 'briefcase']" /></span>
-            Professional Experience</h1>
             <div class="resume__inner-container">
                 <div class="resume__inner-heading">
                     <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'keyboard']" /></span>
