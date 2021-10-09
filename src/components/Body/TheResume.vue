@@ -79,7 +79,7 @@
                 <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'cube']" /></span>
                     Testing</h2>
                 <ul class="resume__inner-heading--list-single">
-                    <li>System ingegration</li>
+                    <li>System integration</li>
                     <li>User acceptance</li>
                 </ul>
                 <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'layer-group']" /></span>
@@ -99,7 +99,19 @@
             <div class="resume__inner-container">
                 <div class="resume__inner-heading">
                     <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'keyboard']" /></span>
-                    Application Developer and Programmer</h2>
+                    Full Stack Developer</h2>
+                    <p class="resume__inner-heading--location">Seven West Media</p>
+                    <span class="resume__inner-heading--date">October 2021 - Present</span>
+                </div>
+            </div>
+        </div>   
+        <div class="resume__outer-container">
+            <h1 class="resume__main-heading"><span class="icon icon__heading"><font-awesome-icon :icon="['fas', 'briefcase']" /></span>
+            Professional Experience</h1>
+            <div class="resume__inner-container">
+                <div class="resume__inner-heading">
+                    <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'keyboard']" /></span>
+                    Senior Full Stack Developer</h2>
                     <p class="resume__inner-heading--location">Your Local Plumbing Group Melbourne</p>
                     <span class="resume__inner-heading--date">July 2018 - Present</span>
                 </div>
