@@ -14,9 +14,9 @@
                         <p>An intuitive platform that provides biddable job leads for tradespeople, featuring a strict and system-assisted workflow for the complete lifecycle of a job.</p>
                     </div>
                 </div>
-                <div class="project__description--right">
+                <!-- <div class="project__description--right">
                     <img src="@/assets/images/isubbie.jpg" alt="project-image">
-                </div>
+                </div> -->
                 <div>
                     <div class="project__header">
                         <h1>Tech Stack</h1>
