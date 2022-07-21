@@ -2,7 +2,6 @@
     <div class="resume">
         <div class="resume__intro">
             <h1>Resume</h1>
-            <!-- <a :href="`${publicPath}cv.pdf`" target="_blank">Open CV</a> -->
         </div>
         <div class="resume__outer-container">
             <h1 class="resume__main-heading"><span class="icon icon__heading"><font-awesome-icon :icon="['fas', 'cog']" /></span>
