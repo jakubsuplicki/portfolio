@@ -107,7 +107,7 @@
                 <h1>Link</h1>
             </div>
             <div class="project__footer">
-                <a href="https://isubbie.com.au" target="_blank">Go to iSubbie</a>
+                <a href="https://isubbie.com.au" target="_blank">iSubbie</a>
             </div>
         </div>
         <div class="project">
@@ -311,6 +311,7 @@ export default defineComponent({
     align-items: center;
     h1 {
         font-size: 2rem;
+        letter-spacing: 0.2rem;
     }
     &::after {
         content: '';
