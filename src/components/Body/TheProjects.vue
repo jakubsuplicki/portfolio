@@ -6,6 +6,76 @@
         </div>
         <div class="project">
             <div class="project__header">
+                <h1>The West Australian, Perthnow, 7news</h1>
+            </div>
+            <div class="project__description">
+                <div class="project__description--left">
+                    <div class="project__description--left-description">
+                        <p>A monorepo of news websites that serves all 3 mastheads and regional sites plus a range of serverless microservices.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="project__header">
+                        <h1>Tools</h1>
+                    </div>
+                    <div class="project__tech-stack">
+                        <p v-for="tech of projectStack8" :key="tech+'8'">{{tech}}</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="project__header">
+                        <h1>Achievements</h1>
+                    </div>
+                    <div class="project__achievement">
+                        <p>Successfully collaborated with the team and delivered multiple projects with a tight deadline. Regularly received very positive feedback from stakeholders, managers, and the team, including shout-outs of the month.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project__header">
+                <h1>Links</h1>
+            </div>
+            <div class="project__footer">
+                <a href="https://thewest.com.au" target="_blank">The West</a>
+                <a href="https://perthnow.com.au" target="_blank">Perthnow</a>
+                <a href="https://7news.com.au" target="_blank">7news</a>
+            </div>
+        </div>
+        <div class="project">
+            <div class="project__header">
+                <h1>The Game</h1>
+            </div>
+            <div class="project__description">
+                <div class="project__description--left">
+                    <div class="project__description--left-description">
+                        <p>React based sports tipping website for AFL and Cricket owned by 7West Media.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="project__header">
+                        <h1>Tools</h1>
+                    </div>
+                    <div class="project__tech-stack">
+                        <p v-for="tech of projectStack9" :key="tech+'9'">{{tech}}</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="project__header">
+                        <h1>Achievements</h1>
+                    </div>
+                    <div class="project__achievement">
+                        <p>Successfully delivered a number of the features for the tipping platform, and admin portal for the support team and dramatically improved scoring efficiency and calculation speed.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project__header">
+                <h1>Link</h1>
+            </div>
+            <div class="project__footer">
+                <a href="https://thegame.com.au" target="_blank">The Game</a>
+            </div>
+        </div>
+        <div class="project">
+            <div class="project__header">
                 <h1>iSubbie Web Application</h1>
             </div>
             <div class="project__description">
@@ -14,12 +84,9 @@
                         <p>An intuitive platform that provides biddable job leads for tradespeople, featuring a strict and system-assisted workflow for the complete lifecycle of a job.</p>
                     </div>
                 </div>
-                <!-- <div class="project__description--right">
-                    <img src="@/assets/images/isubbie.jpg" alt="project-image">
-                </div> -->
                 <div>
                     <div class="project__header">
-                        <h1>Tech Stack</h1>
+                        <h1>Tools</h1>
                     </div>
                     <div class="project__tech-stack">
                         <p v-for="tech of projectStack1" :key="tech+'1'">{{tech}}</p>
@@ -35,6 +102,9 @@
                         Led the technology strategy and played a key role in creation of the application.  Evaluated and became knowledgeable in a new technologies, standards, and trends in web application development.</p>
                     </div>
                 </div>
+            </div>
+            <div class="project__header">
+                <h1>Link</h1>
             </div>
             <div class="project__footer">
                 <a href="https://isubbie.com.au" target="_blank">Go to iSubbie</a>
@@ -52,7 +122,7 @@
                 </div>
                 <div>
                     <div class="project__header">
-                        <h1>Tech Stack</h1>
+                        <h1>Tools</h1>
                     </div>
                     <div class="project__tech-stack">
                         <p v-for="tech of projectStack2" :key="tech+'2'">{{tech}}</p>
@@ -80,7 +150,7 @@
                 </div>
                 <div>
                     <div class="project__header">
-                        <h1>Tech Stack</h1>
+                        <h1>Tools</h1>
                     </div>
                     <div class="project__tech-stack">
                         <p v-for="tech of projectStack3" :key="tech+'3'">{{tech}}</p>
@@ -108,7 +178,7 @@
                 </div>
                 <div>
                     <div class="project__header">
-                        <h1>Tech Stack</h1>
+                        <h1>Tools</h1>
                     </div>
                     <div class="project__tech-stack">
                         <p v-for="tech of projectStack4" :key="tech+'4'">{{tech}}</p>
@@ -136,7 +206,7 @@
                 </div>
                 <div>
                     <div class="project__header">
-                        <h1>Tech Stack</h1>
+                        <h1>Tools</h1>
                     </div>
                     <div class="project__tech-stack">
                         <p v-for="tech of projectStack5" :key="tech+'5'">{{tech}}</p>
@@ -164,7 +234,7 @@
                 </div>
                 <div>
                     <div class="project__header">
-                        <h1>Tech Stack</h1>
+                        <h1>Tools</h1>
                     </div>
                     <div class="project__tech-stack">
                         <p v-for="tech of projectStack6" :key="tech+'6'">{{tech}}</p>
@@ -192,7 +262,7 @@
                 </div>
                 <div>
                     <div class="project__header">
-                        <h1>Tech Stack</h1>
+                        <h1>Tools</h1>
                     </div>
                     <div class="project__tech-stack">
                         <p v-for="tech of projectStack7" :key="tech+'7'">{{tech}}</p>
@@ -218,13 +288,15 @@ export default defineComponent({
     name: 'TheProjects',
     data() {
         return {
-            projectStack1: ['Nuxt.js', 'Vue.js', 'Node.js', 'Express', 'SCSS', 'MongoDB', 'Mongoose ODM', 'MongoDB Atlas', 'Git', 'AWS Beanstalk', 'AWS S3', 'Nginx', 'RESTful API', 'MVC', 'PWA', 'Service Workers', 'Socket.io', 'JWT', 'Passport', 'Winston', 'AroFlo API', 'GroupMe API'],
+            projectStack1: ['Nuxt.js', 'Vue.js', 'Node.js', 'TypeScript', 'Jest', 'Express', 'SCSS', 'MongoDB', 'Mongoose ODM', 'MongoDB Atlas', 'Git', 'AWS Beanstalk', 'AWS S3', 'Nginx', 'RESTful API', 'MVC', 'PWA', 'Service Workers', 'Socket.io', 'JWT', 'Passport', 'Winston', 'AroFlo API', 'GroupMe API', 'Xero API'],
             projectStack2: ['Vue.js', 'Node.js', 'TypeScript', 'Express', 'SCSS', 'Git', 'AWS EC2', 'AWS S3', 'Nginx', 'RESTful API', 'MVC', 'PWA', 'Service Workers', 'JWT', 'AroFlo API'],
-            projectStack3: ['Vue.js', 'Node.js', 'TypeScript', 'Express', 'SCSS', 'Git', 'AWS EC2', 'AWS S3', 'Nginx', 'RESTful API', 'MVC', 'PWA', 'Service Workers', 'JWT', 'Google Places API', 'AroFlo API'],
+            projectStack3: ['Vue.js', 'Node.js', 'TypeScript', 'Express', 'SCSS', 'Git', 'AWS','Nginx', 'RESTful API', 'MVC', 'PWA', 'JWT', 'Google Places API', 'AroFlo API'],
             projectStack4: ['Vue.js', 'Node.js', 'TypeScript', 'Express', 'SCSS', 'Git', 'AWS EC2', 'AWS S3', 'Nginx', 'RESTful API', 'MVC', 'PWA', 'Service Workers', 'JWT', 'Google Scripts', 'AroFlo API', 'GroupMe API'],
             projectStack5: ['jQuery', 'PHP', 'WordPress', 'WooCommerce', 'MySQL'],
             projectStack6: ['jQuery', 'PHP', 'WordPress'],
             projectStack7: ['Node.js', 'Express', 'Google Scripts', 'AroFlo API', 'GroupMe API', 'AWS S3'],
+            projectStack8: ['Typescript', 'Node', 'React', 'Express/Fastify', 'Emotion', 'Jest', 'VR', 'PostgreSQL', 'AWS SDK', 'Pulumi', 'Nx', 'Lambdas', 'SNS/SQS', 'Websockets', 'Sendgrid API'],
+            projectStack9: ['Typescript', 'Node', 'React', 'ReactQuery', 'Express/Fastify', 'Emotion', 'Jest', 'DynamoDB', 'AWS SDK', 'Pulumi', 'Nx', 'StepFunctions', 'Lambdas', 'Chakra', 'SNS/SQS'],
         }
     } 
 });
@@ -253,8 +325,8 @@ export default defineComponent({
     position: relative;
 }
 .project {
-    margin: 0 1rem 1rem 1rem;
-    padding: 0.5rem;
+    margin: 0 1rem 2rem 1rem;
+    padding: 1rem 0.5rem;
     background: linear-gradient(0deg, rgb(255 255 255 / 70%) 0%, rgb(255 255 255 / 95%) 95%); color: $color-main;
     border-radius: $radius-main;
     box-shadow: $shadow-element;
@@ -313,10 +385,19 @@ export default defineComponent({
     }
     &__footer {
         padding: 1rem;
-        background-color: $color-main;
-        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
         a {
+            border-radius: $radius-main;
+            margin: .5rem;
+            padding: 0.8rem 1rem;
+            max-width: 20rem;
+            background-color: $color-main;
+            text-align: center;
+            box-shadow: $shadow-element;
             color: white;
+            text-decoration: none;
         }
     }
 }

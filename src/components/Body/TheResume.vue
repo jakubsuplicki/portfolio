@@ -9,19 +9,45 @@
             Technical Skills</h1>
             <div class="resume__inner-container">
                 <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'code']" /></span>
-                    Programming Languages</h2>
+                    Languages</h2>
                 <ul class="resume__inner-heading--list-single">
                     <li>JavaScript</li>
-                    <li>Node.js</li>
-                    <li>Vue.js</li>
-                    <li>Nuxt.js</li>
-                    <li>jQuery</li>
+                    <li>CSS3</li>
+                    <li>HTML5</li>
                     <li>TypeScript</li>
                     <li>PHP</li>
-                    <li>CSS3</li>
+                    <li>YAML</li>
+                    <li>SQL</li>
+                </ul>
+                <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'code']" /></span>
+                    Frontend</h2>
+                <ul class="resume__inner-heading--list-single">
+                    <li>Vue.js</li>
+                    <li>Vuex</li>
+                    <li>Nuxt.js</li>
+                    <li>React</li>
+                    <li>Redux</li>
+                    <li>jQuery</li>
                     <li>SCSS</li>
+                    <li>PrimeVUE</li>
+                    <li>Chakra</li>
+                    <li>MaterialUI</li>
                     <li>Bootstrap</li>
-                    <li>HTML5</li>
+                </ul>
+                <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'code']" /></span>
+                    Backend</h2>
+                <ul class="resume__inner-heading--list-single">
+                    <li>Node.js</li>
+                    <li>Express</li>
+                    <li>Fastify</li>
+                    <li>Pulumi</li>
+                    <li>Nginx</li>
+                    <li>GraphQL</li>
+                    <li>RESTful API</li>
+                    <li>Ajax</li>
+                    <li>Axios</li>
+                    <li>AWS SDK</li>
+                    <li>AWS (EC2, Elastic Beanstalk, S3, CloudWatch, Lambda, SNS/SQS, StepFunctions, IAM, Route53)</li>
                 </ul>
                 <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'database']" /></span>
                     Database Systems</h2>
@@ -30,40 +56,46 @@
                     <li>Mongoose</li>
                     <li>MySQL</li>
                     <li>Oracle SQL</li>
+                    <li>DynamoDB</li>
+                    <li>PostgreSQL</li>
+                    <li>Sequelize</li>
                 </ul>
                 <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'tools']" /></span>
                     Development Tools</h2>
                 <ul class="resume__inner-heading--list-single">
-                    <li>Ajax</li>
-                    <li>Axios</li>
-                    <li>AWS (EC2, Elastic Beanstalk, S3)</li>
                     <li>FileZilla</li>
                     <li>Git & GitHub</li>
-                    <li>GraphQL</li>
                     <li>MongoDB Atlas</li>
-                    <li>Nginx</li>
-                    <li>RESTful API</li>
                     <li>Postman</li>
                     <li>PWA</li>
+                    <li>Websockets</li>
+                    <li>Nx</li>
                     <li>Service Workers</li>
                     <li>Travis CI </li>
                     <li>Webpack</li>
                     <li>WordPress</li>
-                </ul>
-                <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'laptop']" /></span>
-                    Computer Software</h2>
+                    <li>Docker</li>
+                </ul>                
+                <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'cube']" /></span>
+                    Testing</h2>
                 <ul class="resume__inner-heading--list-single">
-                    <li>Visual Studio Code</li>
-                    <li>Photoshop</li>
-                    <li>Filezilla</li>
-                    <li>Postman</li>
+                    <li>System integration</li>
+                    <li>User acceptance</li>
+                    <li>VR Testing</li>
+                    <li>Jest</li>
+                    <li>Unit Testing</li>
                 </ul>
-                <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'desktop']" /></span>
-                    Operating Systems</h2>
+                <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'layer-group']" /></span>
+                    Development Skills</h2>
                 <ul class="resume__inner-heading--list-single">
-                    <li>macOS</li>
-                    <li>Windows</li>
-                    <li>Linux (Ubuntu)</li>
+                    <li>REST API Design</li>
+                    <li>CI/CD</li>
+                    <li>Monorepos</li>
+                    <li>Serverless</li>
+                    <li>Infrastructure as Code</li>
+                    <li>Design (UI, UX, Prototyping)</li>
+                    <li>Relational Database System Development</li>
+                    <li>Non-Relational Database System Development</li>
                 </ul>
                 <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'project-diagram']" /></span>
                     Visual Modelling</h2>
@@ -76,20 +108,12 @@
                     <li>Flow Chart</li>
                     <li>Use Case Diagram</li>
                 </ul>
-                <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'cube']" /></span>
-                    Testing</h2>
+                <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'desktop']" /></span>
+                    Operating Systems</h2>
                 <ul class="resume__inner-heading--list-single">
-                    <li>System integration</li>
-                    <li>User acceptance</li>
-                </ul>
-                <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'layer-group']" /></span>
-                    Development Skills</h2>
-                <ul class="resume__inner-heading--list-single">
-                    <li>REST API Design</li>
-                    <li>User Experience</li>
-                    <li>Design (UI, UX, Prototyping)</li>
-                    <li>Relational Database System Development</li>
-                    <li>Non-Relational Database System Development</li>
+                    <li>macOS</li>
+                    <li>Windows</li>
+                    <li>Linux (Ubuntu)</li>
                 </ul>
             </div>
         </div>
