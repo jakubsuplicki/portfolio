@@ -28,6 +28,7 @@
                     </div>
                     <div class="project__achievement">
                         <p>Successfully collaborated with the team and delivered multiple projects with a tight deadline. Regularly received very positive feedback from stakeholders, managers, and the team, including shout-outs of the month.</p>
+                        <p>Worked in different areas of the organisation and became knowledgeable across the tech stack and company’s development patterns. Took ownership and lead multiple initiatives.</p>
                     </div>
                 </div>
             </div>
@@ -63,7 +64,7 @@
                         <h1>Achievements</h1>
                     </div>
                     <div class="project__achievement">
-                        <p>Successfully delivered a number of the features for the tipping platform, and admin portal for the support team and dramatically improved scoring efficiency and calculation speed.</p>
+                        <p>Delivered several features for the tipping platform, and admin portal for the support team and dramatically improved scoring efficiency and calculation speed.</p>
                     </div>
                 </div>
             </div>
@@ -97,9 +98,9 @@
                         <h1>Achievements</h1>
                     </div>
                     <div class="project__achievement">
-                        <p>Received positive feedback from stakeholders on a project that was successfully delivered on time and on budget. Developed a stable application with no critical and high severity issues in production since go-live. Anticipated increase in business revenue and reduction in cost – circa 20%. 
+                        <p>Received positive feedback from stakeholders on a project that was successfully delivered on time and on budget. Developed a stable application with no critical or high severity issues in production since go-live. Anticipated increase in business revenue and reduction in cost – circa 40%. 
                         <br><br>
-                        Led the technology strategy and played a key role in creation of the application.  Evaluated and became knowledgeable in a new technologies, standards, and trends in web application development.</p>
+                        Led the technology strategy and played a key role in creation of the application. Evaluated and became knowledgeable in a new technologies, standards, and trends in web application development.</p>
                     </div>
                 </div>
             </div>
@@ -161,7 +162,7 @@
                         <h1>Achievements</h1>
                     </div>
                     <div class="project__achievement">
-                        <p>The app is still in its early stages, but the speed of making a booking is expected to be increased by over 50% but also allows customers to make their own bookings which saves admin time dramatically.</p>
+                        <p>The speed of making a booking is increased by over 70% but also allows customers to make their own bookings which saves admin cost and time.</p>
                     </div>
                 </div>
             </div>
@@ -173,7 +174,7 @@
             <div class="project__description">
                 <div class="project__description--left">
                     <div class="project__description--left-description">
-                        <p>The idea was to create a dedicated server that consists of internal API endpoints that can be called from within different applications in the company that tends to use similar features.</p>
+                        <p>The idea was to create a dedicated server that consists of internal API endpoints that can be called from within different applications in the company.</p>
                     </div>
                 </div>
                 <div>
@@ -245,14 +246,14 @@
                         <h1>Achievements</h1>
                     </div>
                     <div class="project__achievement">
-                        <p>The business expanded by at least 30% due to increased reach and job-specific content on each website.</p>
+                        <p>The business expanded by at least 50% due to increased reach and job-specific content on each website.</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="project">
             <div class="project__header">
-                <h1>Automation Tools</h1>
+                <h1>Automations</h1>
             </div>
             <div class="project__description">
                 <div class="project__description--left">
@@ -273,7 +274,7 @@
                         <h1>Achievements</h1>
                     </div>
                     <div class="project__achievement">
-                        <p>Implementing these tools helped avoid human errors and could be used right away.</p>
+                        <p>Automation helped avoid human errors and ease up many business processes.</p>
                     </div>
                 </div>
             </div>
