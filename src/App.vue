@@ -25,7 +25,6 @@ import TheFooter from '@/components/Navigation/TheFooter.vue'
 import { useResumeStore } from './store/resumeStore'
 
 export default defineComponent({
-  name: 'Home',
   components: {
     TheHeader,
     TheFooter

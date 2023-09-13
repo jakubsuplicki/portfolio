@@ -21,7 +21,6 @@ import TheResume from '@/components/Body/TheResume.vue'
 import { useResumeStore } from '@/store/resumeStore'
 
 export default defineComponent({
-  name: 'Home',
   components: {
     TheMain,
     TheProjects,
