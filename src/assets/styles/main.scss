@@ -15,13 +15,6 @@ html {
   @include respond(tab-land) {
     font-size: 72.5%;
   }
-
-  // @include respond(standard-pc) {
-  //   font-size: 90.625%; //1rem = 14.5px; 14.5px/16px = 90.625%
-  // }
-  // @include respond(big-pc) {
-  //   font-size: 100%;    //1rem = 16px; 16px/16px = 100%
-  // }
 }
 body {
   font-family: 'Poppins', sans-serif;

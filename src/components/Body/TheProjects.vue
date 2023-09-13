@@ -18,7 +18,7 @@
             <h1>Tools</h1>
           </div>
           <div class="project__tech-stack">
-            <p v-for="tech in getTechStack(project)" :key="tech">{{ tech }}</p>
+            <p v-for="tech in getTechStack(project as Project)" :key="tech">{{ tech }}</p>
           </div>
         </div>
         <div>
@@ -26,14 +26,14 @@
             <h1>Achievements</h1>
           </div>
           <div class="project__achievement">
-            <p v-for="achievement in getAchievements(project)" :key="achievement">
+            <p v-for="achievement in getAchievements(project as Project)" :key="achievement">
               {{ achievement }}
             </p>
           </div>
         </div>
-        <div class="project__footer" v-if="getLinks(project)">
+        <div class="project__footer" v-if="getLinks(project as Project)">
           <a
-            v-for="link in getLinks(project)"
+            v-for="link in getLinks(project as Project)"
             :href="link.url || link.href"
             target="_blank"
             :key="link.url"

@@ -2,23 +2,23 @@
   <article class="home">
     <transition-group name="home_animate">
       <div
-        v-if="$store.getters.getSelection === 'about' || $store.getters.getSelection === 'landing'"
+        v-if="getSelection === 'about' || getSelection === 'landing'"
         class="home__main-container"
       >
         <the-main />
       </div>
-      <the-resume v-else-if="$store.getters.getSelection === 'resume'" />
-      <the-projects v-else-if="$store.getters.getSelection === 'projects'" />
+      <the-resume v-else-if="getSelection === 'resume'" />
+      <the-projects v-else-if="getSelection === 'projects'" />
     </transition-group>
   </article>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-
 import TheMain from '@/components/Body/TheMain.vue'
 import TheProjects from '@/components/Body/TheProjects.vue'
 import TheResume from '@/components/Body/TheResume.vue'
+import { useResumeStore } from '@/store/resumeStore'
 
 export default defineComponent({
   name: 'Home',
@@ -26,13 +26,18 @@ export default defineComponent({
     TheMain,
     TheProjects,
     TheResume
+  },
+  computed: {
+    getSelection() {
+      const store = useResumeStore()
+      return store.getSelection
+    }
   }
 })
 </script>
 
 <style lang="scss" scoped>
 .home {
-  // top: 2rem;
   position: relative;
   display: flex;
   justify-content: center;

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="about">
-      <span @click="$store.commit('changeSelection', 'landing')" class="about__landing"
+      <span @click="changeSelection('landing')" class="about__landing"
         ><font-awesome-icon :icon="['fas', 'arrow-left']"
       /></span>
       <div class="about__container">
@@ -23,6 +23,7 @@
 </template>
 
 <script lang="ts">
+import { useResumeStore } from '@/store/resumeStore'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
@@ -31,7 +32,13 @@ library.add(faArrowLeft)
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'TheAbout'
+  name: 'TheAbout',
+  methods: {
+    changeSelection(selection: string) {
+      const store = useResumeStore()
+      store.changeSelection(selection)
+    }
+  }
 })
 </script>
 

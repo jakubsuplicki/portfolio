@@ -1,6 +1,6 @@
 <template>
   <div class="landing">
-    <span @click="$store.commit('changeSelection', 'about')" class="landing__about"
+    <span @click="changeSelection('about')" class="landing__about"
       ><font-awesome-icon :icon="['far', 'user-circle']"
     /></span>
     <div class="landing__image">
@@ -14,13 +14,14 @@
     </div>
     <span class="landing__divider"></span>
     <div class="landing__buttons">
-      <button @click="$store.commit('changeSelection', 'resume')">RESUME</button>
-      <button @click="$store.commit('changeSelection', 'projects')">PROJECTS</button>
+      <button @click="changeSelection('resume')">RESUME</button>
+      <button @click="changeSelection('projects')">PROJECTS</button>
     </div>
   </div>
 </template>
 
 <script lang="ts">
+import { useResumeStore } from '@/store/resumeStore'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUserCircle } from '@fortawesome/free-regular-svg-icons'
 library.add(faUserCircle)
@@ -28,7 +29,14 @@ library.add(faUserCircle)
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'TheLanding'
+  name: 'TheLanding',
+
+  methods: {
+    changeSelection(selection: string) {
+      const store = useResumeStore()
+      store.changeSelection(selection)
+    }
+  }
 })
 </script>
 

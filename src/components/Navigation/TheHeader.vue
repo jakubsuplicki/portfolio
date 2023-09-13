@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <div class="header__left" @click="$store.commit('changeSelection', 'landing')">
+    <div class="header__left" @click="changeSelection('landing')">
       <h1>
         <span><font-awesome-icon :icon="['fas', 'long-arrow-alt-right']" /></span>J. Suplicki
       </h1>
@@ -11,10 +11,10 @@
     </div>
     <div class="header__right">
       <ul class="header__navigation-list">
-        <li @click="$store.commit('changeSelection', 'landing')">Home</li>
-        <li @click="$store.commit('changeSelection', 'about')">About Me</li>
-        <li @click="$store.commit('changeSelection', 'resume')">Resume</li>
-        <li @click="$store.commit('changeSelection', 'projects')">Projects</li>
+        <li @click="changeSelection('landing')">Home</li>
+        <li @click="changeSelection('about')">About Me</li>
+        <li @click="changeSelection('resume')">Resume</li>
+        <li @click="changeSelection('projects')">Projects</li>
       </ul>
       <div
         class="menu menu__closed"
@@ -61,6 +61,7 @@ library.add(faLongArrowAltRight)
 
 import { defineComponent } from 'vue'
 import TheMobileMenu from '@/components/Navigation/TheMobileMenu.vue'
+import { useResumeStore } from '@/store/resumeStore'
 
 export default defineComponent({
   name: 'TheHeader',
@@ -109,6 +110,10 @@ export default defineComponent({
           this.typeTitle()
         }
       }
+    },
+    changeSelection(selection: string) {
+      const store = useResumeStore()
+      store.changeSelection(selection)
     }
   },
   mounted() {

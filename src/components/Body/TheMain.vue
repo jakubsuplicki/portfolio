@@ -2,14 +2,14 @@
   <div class="flip">
     <div
       :class="{
-        'flip__each--rotate-front': $store.getters.getSelection === 'about'
+        'flip__each--rotate-front': getSelection === 'about'
       }"
       class="flip__each flip__each--front"
       key="landing"
     >
       <the-landing
         :class="{
-          'flip__each--content-flip': $store.getters.getSelection === 'about'
+          'flip__each--content-flip': getSelection === 'about'
         }"
         class="flip__each--content"
       />
@@ -17,14 +17,14 @@
     </div>
     <div
       :class="{
-        'flip__each--rotate-back': $store.getters.getSelection === 'about'
+        'flip__each--rotate-back': getSelection === 'about'
       }"
       class="flip__each flip__each--back"
       key="about"
     >
       <the-about
         :class="{
-          'flip__each--content-flip': $store.getters.getSelection === 'landing'
+          'flip__each--content-flip': getSelection === 'landing'
         }"
         class="flip__each--content"
       />
@@ -39,6 +39,7 @@ import { defineComponent } from 'vue'
 import TheLanding from '@/components/Body/MainCard/TheLanding.vue'
 import TheAbout from '@/components/Body/MainCard/TheAbout.vue'
 import TheContact from '@/components/Utils/TheContact.vue'
+import { useResumeStore } from '@/store/resumeStore'
 
 export default defineComponent({
   name: 'TheMain',
@@ -46,6 +47,12 @@ export default defineComponent({
     TheLanding,
     TheAbout,
     TheContact
+  },
+  computed: {
+    getSelection() {
+      const store = useResumeStore()
+      return store.getSelection
+    }
   }
 })
 </script>

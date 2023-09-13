@@ -2,22 +2,29 @@
   <div class="mobile-menu">
     <div class="mobile-menu__bg mobile-menu__bg--top"></div>
     <ul class="mobile-menu__navigation-list">
-      <li @click="$store.commit('changeSelection', 'landing'), $emit('close')">Home</li>
-      <li @click="$store.commit('changeSelection', 'about'), $emit('close')">About me</li>
-      <li @click="$store.commit('changeSelection', 'resume'), $emit('close')">Resume</li>
-      <li @click="$store.commit('changeSelection', 'projects'), $emit('close')">Projects</li>
+      <li @click="changeSelection('landing'), $emit('close')">Home</li>
+      <li @click="changeSelection('about'), $emit('close')">About me</li>
+      <li @click="changeSelection('resume'), $emit('close')">Resume</li>
+      <li @click="changeSelection('projects'), $emit('close')">Projects</li>
     </ul>
     <div class="mobile-menu__bg mobile-menu__bg--bot"></div>
   </div>
 </template>
 
 <script lang="ts">
+import { useResumeStore } from '@/store/resumeStore'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'TheMobileMenu',
   props: {
     isMobileMenu: Boolean
+  },
+  methods: {
+    changeSelection(selection: string) {
+      const store = useResumeStore()
+      store.changeSelection(selection)
+    }
   }
 })
 </script>
@@ -29,7 +36,7 @@ export default defineComponent({
   justify-content: center;
   align-items: center;
   transition: background-image 0.3s ease-in-out;
-  background-image: url('~@/assets/images/bg_main.jpg');
+  background-image: url('@/assets/images/bg_main.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0% 5%;

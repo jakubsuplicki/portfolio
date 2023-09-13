@@ -7,8 +7,7 @@
       <div
         class="main"
         :class="{
-          show_scroll:
-            $store.getters.getSelection !== 'landing' && $store.getters.getSelection !== 'about'
+          show_scroll: getSelection !== 'landing' && getSelection !== 'about'
         }"
       >
         <router-view />
@@ -23,12 +22,19 @@
 import { defineComponent } from 'vue'
 import TheHeader from '@/components/Navigation/TheHeader.vue'
 import TheFooter from '@/components/Navigation/TheFooter.vue'
+import { useResumeStore } from './store/resumeStore'
 
 export default defineComponent({
   name: 'Home',
   components: {
     TheHeader,
     TheFooter
+  },
+  computed: {
+    getSelection() {
+      const store = useResumeStore()
+      return store.getSelection
+    }
   }
 })
 </script>
@@ -61,7 +67,7 @@ export default defineComponent({
   width: 100%;
   position: relative;
   height: calc(100vh - 12rem);
-  background-image: url('~@/assets/images/bg_main.jpg');
+  background-image: url('@/assets/images/bg_main.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0% 15%;

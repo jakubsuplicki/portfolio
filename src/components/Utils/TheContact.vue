@@ -3,25 +3,37 @@
     <div>
       <transition-group name="swap_left">
         <span
-          :class="{ 'contact--phone-icon': showContact !== 'phone', 'contact--close-icon-left': showContact === 'phone' }"
+          :class="{
+            'contact--phone-icon': showContact !== 'phone',
+            'contact--close-icon-left': showContact === 'phone'
+          }"
           key="icon-phone"
           v-if="showContact !== 'email'"
           @click="toggleContact('phone')"
         >
-          <font-awesome-icon :icon="showContact === 'phone' ? ['fas', 'times'] : ['fas', 'phone-alt']" /></span>
+          <font-awesome-icon
+            :icon="showContact === 'phone' ? ['fas', 'times'] : ['fas', 'phone-alt']"
+        /></span>
         <p :class="{ 'contact--center-text': showContact }" key="phone" v-else>0423 938 992</p>
       </transition-group>
     </div>
     <div>
       <transition-group name="swap_right">
         <span
-          :class="{ 'contact--email-icon': showContact !== 'email', 'contact--close-icon-right': showContact === 'email' }"
+          :class="{
+            'contact--email-icon': showContact !== 'email',
+            'contact--close-icon-right': showContact === 'email'
+          }"
           key="icon-email"
           v-if="showContact !== 'phone'"
           @click="toggleContact('email')"
         >
-          <font-awesome-icon :icon="showContact === 'email' ? ['fas', 'times'] : ['far', 'envelope']" /></span>
-        <p :class="{ 'contact--center-text': showContact }" key="email" v-else>suplicki.jakub@gmail.com</p>
+          <font-awesome-icon
+            :icon="showContact === 'email' ? ['fas', 'times'] : ['far', 'envelope']"
+        /></span>
+        <p :class="{ 'contact--center-text': showContact }" key="email" v-else>
+          suplicki.jakub@gmail.com
+        </p>
       </transition-group>
     </div>
   </div>
@@ -45,9 +57,9 @@ export default defineComponent({
   methods: {
     toggleContact(type: 'email' | 'phone') {
       if (this.showContact === type) {
-        this.showContact = null;
+        this.showContact = null
       } else {
-        this.showContact = type;
+        this.showContact = type
       }
     }
   }
@@ -102,12 +114,12 @@ export default defineComponent({
   }
   &--close-icon-left {
     cursor: pointer;
-    font-size: 2rem;  
+    font-size: 2rem;
     left: 2.5rem;
   }
   &--close-icon-right {
     cursor: pointer;
-    font-size: 2rem;  
+    font-size: 2rem;
     right: 2rem;
   }
 }

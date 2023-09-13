@@ -3,16 +3,15 @@ export type Link = {
   url?: string
   href?: string
 }
-
 export type Tools =
   | {
-      stack?: string[]
+      stack: string[]
     }
   | string[]
 
 export type Achievements =
   | {
-      content?: string[]
+      content: string[]
     }
   | string[]
 

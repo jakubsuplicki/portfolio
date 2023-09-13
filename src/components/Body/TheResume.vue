@@ -161,7 +161,7 @@ export default defineComponent({
   },
   data() {
     return {
-      publicPath: process.env.BASE_URL,
+      publicPath: '/portfolio',
       showImage: null as string | null,
       resumeSkills,
       professionalExperience,
