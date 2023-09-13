@@ -1,26 +1,38 @@
 <template>
   <footer class="footer">
     <div class="media">
-        <div class="media__icons">
-            <a :color="iconColor" :style="{color: iconColor}" href="https://stackoverflow.com/users/6170233/jakub-a-suplicki" target="_blank"><font-awesome-icon :icon="['fab', 'stack-overflow']" /></a>
-            <a :color="iconColor" :style="{color: iconColor}" href="https://codepen.io/jakub-suplicki/pens/popular" target="_blank"><font-awesome-icon :icon="['fab', 'codepen']" /></a>
-            <a :color="iconColor" :style="{color: iconColor}" href="https://github.com/jakubsuplicki" target="_blank"><font-awesome-icon :icon="['fab', 'github']" /></a>
-            <a :color="iconColor" :style="{color: iconColor}" href="https://www.linkedin.com/in/jakub-suplicki/" target="_blank"><font-awesome-icon :icon="['fab', 'linkedin']" /></a>
-        </div>
+      <div class="media__icons">
+        <a href="https://stackoverflow.com/users/6170233/jakub-a-suplicki" target="_blank"
+          ><font-awesome-icon :icon="['fab', 'stack-overflow']"
+        /></a>
+        <a href="https://codepen.io/jakub-suplicki/pens/popular" target="_blank"
+          ><font-awesome-icon :icon="['fab', 'codepen']"
+        /></a>
+        <a href="https://github.com/jakubsuplicki" target="_blank"
+          ><font-awesome-icon :icon="['fab', 'github']"
+        /></a>
+        <a href="https://www.linkedin.com/in/jakub-suplicki/" target="_blank"
+          ><font-awesome-icon :icon="['fab', 'linkedin']"
+        /></a>
+      </div>
     </div>
   </footer>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-// font awesome
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faStackOverflow, faCodepen, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { defineComponent } from 'vue'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import {
+  faStackOverflow,
+  faCodepen,
+  faLinkedin,
+  faGithub
+} from '@fortawesome/free-brands-svg-icons'
 library.add(faStackOverflow, faCodepen, faLinkedin, faGithub)
 
 export default defineComponent({
   name: 'TheNavigator'
-});
+})
 </script>
 
 <style scoped lang="scss">
@@ -44,15 +56,15 @@ export default defineComponent({
   }
 }
 .media {
-    width: 45%;
-    margin: auto;
-    a {
-        color: white;
-        font-size: 1.8rem;
-    }
-    &__icons {
-        display: flex;
-        justify-content: space-around;
-    }
+  width: 45%;
+  margin: auto;
+  a {
+    color: white;
+    font-size: 1.8rem;
+  }
+  &__icons {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 </style>

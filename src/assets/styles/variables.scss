@@ -1,4 +1,4 @@
-$color-main:#1d2f36; //#283043;
+$color-main: #1d2f36; //#283043;
 $color-secondary: #45585f; //#7b999f;
 $color-third: #9e9885;
 $color-main-light: #f5da92;
@@ -10,7 +10,7 @@ $color-dark-gray: #383838;
 $color-bg-light: #708a94; //#6b868b;
 $color-bg-dark: #162227; //#1d2f36; //#61797e;
 
-$radius-main: .4rem;
+$radius-main: 0.4rem;
 $radius-main-round: 3.4rem;
 
 $btn-padding: 1rem 2rem;
@@ -18,5 +18,4 @@ $btn-padding: 1rem 2rem;
 $max-width: 100rem;
 $max-width-content: 60rem;
 
-$shadow-element: 0 .1rem .3rem rgba(0, 0, 0, 0.6),
-
+$shadow-element: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.6);

@@ -1,21 +1,24 @@
 <template>
   <article class="home">
     <transition-group name="home_animate">
-      <div v-if="$store.getters.getSelection==='about' || $store.getters.getSelection==='landing'" class="home__main-container">
+      <div
+        v-if="$store.getters.getSelection === 'about' || $store.getters.getSelection === 'landing'"
+        class="home__main-container"
+      >
         <the-main />
       </div>
-      <the-resume v-else-if="$store.getters.getSelection==='resume'" />
-      <the-projects v-else-if="$store.getters.getSelection==='projects'"/>
+      <the-resume v-else-if="$store.getters.getSelection === 'resume'" />
+      <the-projects v-else-if="$store.getters.getSelection === 'projects'" />
     </transition-group>
   </article>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue'
 
-import TheMain from '@/components/Body/TheMain.vue';
-import TheProjects from '@/components/Body/TheProjects.vue';
-import TheResume from '@/components/Body/TheResume.vue';
+import TheMain from '@/components/Body/TheMain.vue'
+import TheProjects from '@/components/Body/TheProjects.vue'
+import TheResume from '@/components/Body/TheResume.vue'
 
 export default defineComponent({
   name: 'Home',
@@ -24,7 +27,7 @@ export default defineComponent({
     TheProjects,
     TheResume
   }
-});
+})
 </script>
 
 <style lang="scss" scoped>
@@ -36,7 +39,7 @@ export default defineComponent({
   width: 100%;
   overflow: hidden;
   &__main-container {
-    height: calc(100vh - 16rem); 
+    height: calc(100vh - 16rem);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,45 +53,46 @@ export default defineComponent({
   transform: perspective(1000px) rotateY(0deg);
   margin: 2rem 0;
   transform-style: preserve-3d;
-  z-index:1;
+  z-index: 1;
   &__each {
     position: absolute;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     background-color: $color-secondary;
     opacity: 0.9;
 
     transform: rotateY(0deg);
     transform-style: preserve-3d;
-    z-index:1;
-    &--front, &--back {
-      transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+    z-index: 1;
+    &--front,
+    &--back {
+      transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
       backface-visibility: hidden;
-			overflow: hidden;
-			position:absolute;
-			top:0;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
     }
     &--front {
-			transform: rotateY(0deg);
-			transform-style: preserve-3d;
-			z-index:1;
+      transform: rotateY(0deg);
+      transform-style: preserve-3d;
+      z-index: 1;
     }
     &--back {
       transform: rotateY(180deg);
-			transform-style: preserve-3d;
-			z-index:1;
+      transform-style: preserve-3d;
+      z-index: 1;
     }
     &--rotate-front {
-			transform: rotateY(-180deg);
-			transform-style: preserve-3d;
+      transform: rotateY(-180deg);
+      transform-style: preserve-3d;
     }
     &--rotate-back {
       transform: rotateY(0deg);
-			transform-style: preserve-3d;
+      transform-style: preserve-3d;
     }
   }
 }
- 
+
 .home_animate-enter {
   opacity: 0;
 }
@@ -108,7 +112,7 @@ export default defineComponent({
 
 .home_animate-leave-active {
   animation: slide-out 1s ease-out forwards;
-  transition: opacity .5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
   opacity: 0;
   position: absolute;
   z-index: -1;
@@ -120,21 +124,21 @@ export default defineComponent({
 
 @keyframes slide-in {
   from {
-    transform: translateY(5rem)
+    transform: translateY(5rem);
   }
 
   to {
-    transform: translateY(0)
+    transform: translateY(0);
   }
 }
 
 @keyframes slide-out {
   from {
-    transform: translateY(0)
+    transform: translateY(0);
   }
 
   to {
-    transform: translateY(5rem)
+    transform: translateY(5rem);
   }
 }
 </style>

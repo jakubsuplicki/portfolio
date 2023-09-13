@@ -6,16 +6,14 @@ export default createStore({
   },
   mutations: {
     changeSelection(state, payload) {
-      return state.selected = payload
+      return (state.selected = payload)
     }
   },
-  actions: {
-  },
+  actions: {},
   getters: {
     getSelection(state) {
       return state.selected
     }
   },
-  modules: {
-  }
+  modules: {}
 })

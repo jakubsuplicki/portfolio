@@ -1,31 +1,36 @@
 <template>
-<div class="outer-container">
-  <div class="inner-container__navigation">
-    <TheHeader class="navigation"/>
-  </div>
-  <div class="inner-container__body">
-    <div class="main" :class="{show_scroll: $store.getters.getSelection!=='landing' && $store.getters.getSelection!=='about'}">
-      <router-view />
+  <div class="outer-container">
+    <div class="inner-container__navigation">
+      <TheHeader class="navigation" />
+    </div>
+    <div class="inner-container__body">
+      <div
+        class="main"
+        :class="{
+          show_scroll:
+            $store.getters.getSelection !== 'landing' && $store.getters.getSelection !== 'about'
+        }"
+      >
+        <router-view />
+      </div>
+    </div>
+    <div class="inner-container__navigation">
+      <TheFooter class="navigation" />
     </div>
   </div>
-  <div class="inner-container__navigation">
-    <TheFooter class="navigation"/>
-  </div>
-</div>
-
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue';
-import TheHeader from '@/components/Navigation/TheHeader.vue';
-import TheFooter from '@/components/Navigation/TheFooter.vue';
+import { defineComponent } from 'vue'
+import TheHeader from '@/components/Navigation/TheHeader.vue'
+import TheFooter from '@/components/Navigation/TheFooter.vue'
 
 export default defineComponent({
   name: 'Home',
   components: {
     TheHeader,
     TheFooter
-  },
-});
+  }
+})
 </script>
 <style lang="scss">
 .outer-container {
@@ -58,7 +63,7 @@ export default defineComponent({
   height: calc(100vh - 12rem);
   background-image: url('~@/assets/images/bg_main.jpg');
   background-size: cover;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-position: 0% 15%;
   overflow: hidden;
   @include respond(tab-land) {
@@ -66,5 +71,4 @@ export default defineComponent({
     border-radius: $radius-main;
   }
 }
-
 </style>

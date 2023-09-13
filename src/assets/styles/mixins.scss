@@ -16,22 +16,34 @@ $breakpoint argument choices:
 */
 
 @mixin respond($breakpoint) {
-    @if $breakpoint == min-phone {
-        @media (min-width: 20.5em) { @content };     //328px
-    }
-    @if $breakpoint == tab-port {
-        @media (min-width: 37.5em) { @content };     //600px
-    }
-    @if $breakpoint == tab-port {
-        @media (min-width: 37.5em) { @content };     //600px
-    }
-    @if $breakpoint == tab-land {
-        @media (min-width: 56.25em) { @content };    //900px
-    }
-    @if $breakpoint == standard-pc {
-        @media (min-width: 64em) { @content };       //1200px - 75em // 1024px - 64em
-    }
-    @if $breakpoint == big-pc {
-        @media (min-width: 112.5em) { @content };    //1800px
-    }
+  @if $breakpoint == min-phone {
+    @media (min-width: 20.5em) {
+      @content;
+    } //328px
+  }
+  @if $breakpoint == tab-port {
+    @media (min-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == tab-port {
+    @media (min-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == tab-land {
+    @media (min-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == standard-pc {
+    @media (min-width: 64em) {
+      @content;
+    } //1200px - 75em // 1024px - 64em
+  }
+  @if $breakpoint == big-pc {
+    @media (min-width: 112.5em) {
+      @content;
+    } //1800px
+  }
 }
