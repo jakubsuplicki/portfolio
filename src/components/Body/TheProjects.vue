@@ -47,7 +47,7 @@
 
 <script lang="ts">
 import { projects } from '@/config/projects'
-import { Project, Link } from '@/types/project'
+import type { Link, Project } from '@/types/project'
 export default {
   name: 'TheProjects',
   data() {
