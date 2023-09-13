@@ -3,10 +3,8 @@
         <div class="about">
             <span @click="$store.commit('changeSelection', 'landing')" class="about__landing"><font-awesome-icon :icon="['fas', 'arrow-left']" /></span>
             <div class="about__container">
-                <p> An ambitious people-oriented full stack developer, with a passion for working on complex and engaging projects in a time-sensitive and fast-paced work environment. 
-                    Professional experience of over 4 years in designing, testing, automating, integrating, and deploying enterprise applications.</p> 
-                <p>An excellent communicator and problem-solver, with the ability to grasp complex systems, identify opportunities for improvements and resolve critical issues. 
-                    Enjoys collaborating with technical and non-technical stakeholders to provide business value at startup speed.</p>
+                <p> An ambitious people-oriented full stack developer, with a passion for working on complex and engaging projects in a time-sensitive and fast-paced work environment. Professional experience of over 5 years in designing, developing, testing, automating, integrating, and deploying enterprise applications.</p> 
+                <p>An excellent communicator and problem-solver, with the ability to grasp complex systems, identify opportunities for improvements and resolve critical issues. Enjoys collaborating with technical and non-technical stakeholders to provide business value at start- up speed.</p>
             </div>
         </div>
     </div>

@@ -6,6 +6,38 @@
         </div>
         <div class="project">
             <div class="project__header">
+                <h1>TAFE NSW</h1>
+            </div>
+            <div class="project__description">
+                <div class="project__description--left">
+                    <div class="project__description--left-description">
+                        <p>The TAFE NSW project is an advanced online platform designed to streamline and automate student enrolment, encapsulating a seamless, system-guided workflow for the entire admission process.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="project__header">
+                        <h1>Tools</h1>
+                    </div>
+                    <div class="project__tech-stack">
+                        <p v-for="tech of projectStack10" :key="tech+'8'">{{tech}}</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="project__header">
+                        <h1>Achievements</h1>
+                    </div>
+                    <div class="project__achievement">
+                        <p>Spearheaded the launch of a transformative online student enrolment platform, utilising Vue 3 and Nuxt 3 technologies. This achievement was a testament to effective teamwork and agile methodologies, with the successful completion of the project despite stringent deadlines.</p>
+                        <p> Our breakthrough was met with high praise from all stakeholders and earned consistent positive recognition. My engagement in diverse areas of the organisation bolstered my proficiency in our tech stack and development patterns. Displayed proactive ownership by leading multiple initiatives and fostering innovation in our approaches.</p>
+                    </div>
+                </div>
+                <div class="project__footer">
+                    <a href="https://www.tafensw.edu.au/" target="_blank">TAFE NSW</a>
+                </div>
+            </div>
+        </div>
+        <div class="project">
+            <div class="project__header">
                 <h1>The West Australian, Perthnow, 7news</h1>
             </div>
             <div class="project__description">
@@ -298,6 +330,7 @@ export default defineComponent({
             projectStack7: ['Node.js', 'Express', 'Google Scripts', 'AroFlo API', 'GroupMe API', 'AWS S3'],
             projectStack8: ['Typescript', 'Node', 'React', 'Express/Fastify', 'Emotion', 'Jest', 'VR', 'PostgreSQL', 'AWS SDK', 'Pulumi', 'Nx', 'Lambdas', 'SNS/SQS', 'Websockets', 'Sendgrid API'],
             projectStack9: ['Typescript', 'Node', 'React', 'ReactQuery', 'Express/Fastify', 'Emotion', 'Jest', 'DynamoDB', 'AWS SDK', 'Pulumi', 'Nx', 'StepFunctions', 'Lambdas', 'Chakra', 'SNS/SQS'],
+            projectStack10: ['Typescript', 'Node', 'Vue 2', 'Vue 3', 'Nuxt 2', 'Nuxt 3', 'Pinia', 'Vuex', 'Express', 'Tailwind', 'Jest', 'MongoDB', 'Azure', 'Bitbucket',]
         }
     } 
 });
@@ -395,6 +428,7 @@ export default defineComponent({
             margin: .5rem;
             padding: 0.8rem 1rem;
             max-width: 20rem;
+            min-width: 10rem;
             background-color: $color-main;
             text-align: center;
             box-shadow: $shadow-element;

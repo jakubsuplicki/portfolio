@@ -23,13 +23,16 @@
                 <ul class="resume__inner-heading--list-single">
                     <li>Vue.js</li>
                     <li>Vuex</li>
+                    <li>Pinia</li>
                     <li>Nuxt.js</li>
                     <li>React</li>
+                    <li>React Native</li>
                     <li>Redux</li>
                     <li>jQuery</li>
                     <li>SCSS</li>
                     <li>PrimeVUE</li>
                     <li>Chakra</li>
+                    <li>Tailwind</li>
                     <li>MaterialUI</li>
                     <li>Bootstrap</li>
                 </ul>
@@ -64,6 +67,7 @@
                 <ul class="resume__inner-heading--list-single">
                     <li>FileZilla</li>
                     <li>Git & GitHub</li>
+                    <li>Bitbucket</li>
                     <li>MongoDB Atlas</li>
                     <li>Postman</li>
                     <li>PWA</li>
@@ -74,6 +78,8 @@
                     <li>Webpack</li>
                     <li>WordPress</li>
                     <li>Docker</li>
+                    <li>Jira</li>
+                    <li>Linear</li>
                 </ul>                
                 <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'cube']" /></span>
                     Testing</h2>
@@ -122,17 +128,41 @@
             <div class="resume__inner-container">
                 <div class="resume__inner-heading">
                     <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'keyboard']" /></span>
-                    Full Stack Developer</h2>
-                    <p class="resume__inner-heading--location">Seven West Media</p>
-                    <span class="resume__inner-heading--date">October 2021 - Present</span>
+                    Senior Full Stack Developer (Contract)</h2>
+                    <p class="resume__inner-heading--location">Contractor for TAFE NSW, via Digitality</p>
+                    <span class="resume__inner-heading--date">October 2022 - Present</span>
                 </div>
             </div>
             <div class="resume__inner-container">
                 <div class="resume__inner-heading">
                     <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'keyboard']" /></span>
-                    Senior Full Stack Developer</h2>
+                    Full Stack Developer (Full Time)</h2>
+                    <p class="resume__inner-heading--location">Seven West Media</p>
+                    <span class="resume__inner-heading--date">October 2021 - October 2022</span>
+                </div>
+            </div>
+            <div class="resume__inner-container">
+                <div class="resume__inner-heading">
+                    <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'keyboard']" /></span>
+                    Senior Full Stack Developer (Contract)</h2>
                     <p class="resume__inner-heading--location">Your Local Plumbing Group Melbourne</p>
-                    <span class="resume__inner-heading--date">July 2018 - Present</span>
+                    <span class="resume__inner-heading--date">October 2021 - February 2023</span>
+                </div>
+            </div>
+            <div class="resume__inner-container">
+                <div class="resume__inner-heading">
+                    <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'keyboard']" /></span>
+                    Full Stack Developer (Full Time)</h2>
+                    <p class="resume__inner-heading--location">Your Local Plumbing Group Melbourne</p>
+                    <span class="resume__inner-heading--date">Novemeber 2018 - September 2021</span>
+                </div>
+            </div>
+            <div class="resume__inner-container">
+                <div class="resume__inner-heading">
+                    <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'keyboard']" /></span>
+                    Junior Full Stack Developer (Full Time)</h2>
+                    <p class="resume__inner-heading--location">Your Local Plumbing Group Melbourne</p>
+                    <span class="resume__inner-heading--date">July 2018 - October 2018</span>
                 </div>
             </div>
         </div>     
@@ -142,9 +172,17 @@
             <div class="resume__inner-container">
                 <div class="resume__inner-heading">
                     <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'user-graduate']" /></span>
+                        Graduate Diploma, Management</h2>
+                    <p class="resume__inner-heading--location">Brighton College</p>
+                    <span class="resume__inner-heading--date">October 2020 - October 2021</span>
+                </div>
+            </div>
+            <div class="resume__inner-container">
+                <div class="resume__inner-heading">
+                    <h2 class="resume__inner-heading--title"><span class="icon icon__sub-heading"><font-awesome-icon :icon="['fas', 'user-graduate']" /></span>
                     Bachelor of Information Technology</h2>
                     <p class="resume__inner-heading--location">Melbourne Polytechnic</p>
-                    <span class="resume__inner-heading--date">July 2015 – July 2018</span>
+                    <span class="resume__inner-heading--date">July 2015 - July 2018</span>
                 </div>
             </div>
         </div>
