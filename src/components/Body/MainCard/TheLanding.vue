@@ -32,7 +32,7 @@ export default defineComponent({
   name: 'TheLanding',
 
   methods: {
-    changeSelection(selection: string) {
+    changeSelection(selection: ResumeSelection) {
       const store = useResumeStore()
       store.changeSelection(selection)
     }

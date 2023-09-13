@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 
 export const useResumeStore = defineStore('resume', {
   state: () => ({
-    selected: 'landing'
+    selected: 'landing' as ResumeSelection
   }),
   getters: {
     getSelection(state) {
@@ -10,7 +10,7 @@ export const useResumeStore = defineStore('resume', {
     }
   },
   actions: {
-    changeSelection(payload: string) {
+    changeSelection(payload: ResumeSelection) {
       return (this.selected = payload)
     }
   }

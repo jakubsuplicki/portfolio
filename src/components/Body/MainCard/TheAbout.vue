@@ -34,7 +34,7 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'TheAbout',
   methods: {
-    changeSelection(selection: string) {
+    changeSelection(selection: ResumeSelection) {
       const store = useResumeStore()
       store.changeSelection(selection)
     }

@@ -111,7 +111,7 @@ export default defineComponent({
         }
       }
     },
-    changeSelection(selection: string) {
+    changeSelection(selection: ResumeSelection) {
       const store = useResumeStore()
       store.changeSelection(selection)
     }
