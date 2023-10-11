@@ -14,7 +14,9 @@
           <font-awesome-icon
             :icon="showContact === 'phone' ? ['fas', 'times'] : ['fas', 'phone-alt']"
         /></span>
-        <p :class="{ 'contact--center-text': showContact }" key="phone" v-else>0423 938 992</p>
+        <p :class="{ 'contact--center-text': showContact }" key="phone" v-else>
+          suplicki.jakub@gmail.com
+        </p>
       </transition-group>
     </div>
     <div>
@@ -31,9 +33,7 @@
           <font-awesome-icon
             :icon="showContact === 'email' ? ['fas', 'times'] : ['far', 'envelope']"
         /></span>
-        <p :class="{ 'contact--center-text': showContact }" key="email" v-else>
-          suplicki.jakub@gmail.com
-        </p>
+        <p :class="{ 'contact--center-text': showContact }" key="email" v-else>0423 938 992</p>
       </transition-group>
     </div>
   </div>
