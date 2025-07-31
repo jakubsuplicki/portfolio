@@ -82,10 +82,7 @@
               ? 'bg-primary-500 text-white shadow-lg'
               : 'text-slate-700 dark:text-slate-300 hover:bg-white/20 dark:hover:bg-slate-800/20'
           ]"
-          :style="{ 
-            animationDelay: (index * 50) + 'ms',
-            animation: showMobileMenu ? 'slideInFromRight 0.3s ease-out forwards' : 'none'
-          }"
+          :style="getAnimationStyle(index)"
         >
           <component :is="item.icon" class="w-4 h-4 mr-2 sm:mr-3" />
           {{ item.label }}
@@ -127,6 +124,13 @@ const toggleTheme = () => {
 
 const toggleMobileMenu = () => {
   showMobileMenu.value = !showMobileMenu.value
+}
+
+const getAnimationStyle = (index: number) => {
+  return {
+    animationDelay: `${index * 50}ms`,
+    animation: showMobileMenu.value ? 'slideInFromRight 0.3s ease-out forwards' : 'none'
+  }
 }
 </script>
 
