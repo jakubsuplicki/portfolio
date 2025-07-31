@@ -76,12 +76,7 @@
           v-for="(item, index) in navigationItems"
           :key="item.key"
           @click="changeSelection(item.key); showMobileMenu = false"
-          :class="[
-            'w-full text-left px-3 sm:px-4 py-2 sm:py-3 rounded-lg font-medium transition-all duration-200 flex items-center text-sm sm:text-base transform mobile-menu-item',
-            getSelection === item.key
-              ? 'bg-primary-500 text-white shadow-lg'
-              : 'text-slate-700 dark:text-slate-300 hover:bg-white/20 dark:hover:bg-slate-800/20'
-          ]"
+
           :data-index="index"
         >
           <component :is="item.icon" class="w-4 h-4 mr-2 sm:mr-3" />
