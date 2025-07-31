@@ -83,7 +83,7 @@
               : 'text-slate-700 dark:text-slate-300 hover:bg-white/20 dark:hover:bg-slate-800/20'
           ]"
           :style="{ 
-            animationDelay: `${index * 50}ms`,
+            animationDelay: (index * 50) + 'ms',
             animation: showMobileMenu ? 'slideInFromRight 0.3s ease-out forwards' : 'none'
           }"
         >
