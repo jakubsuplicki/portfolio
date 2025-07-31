@@ -80,9 +80,9 @@
             'w-full text-left px-3 sm:px-4 py-2 sm:py-3 rounded-lg font-medium transition-all duration-200 flex items-center text-sm sm:text-base transform mobile-menu-item',
             getSelection === item.key
               ? 'bg-primary-500 text-white shadow-lg'
-              : 'text-slate-700 dark:text-slate-300 hover:bg-white/20 dark:hover:bg-slate-800/20'
+              : 'text-slate-700 dark:text-slate-300 hover:bg-white/20 dark:hover:bg-slate-800/20',
+            `mobile-menu-item-${index}`
           ]"
-          :style="{ '--animation-delay': (index * 50) + 'ms' }"
         >
           <component :is="item.icon" class="w-4 h-4 mr-2 sm:mr-3" />
           {{ item.label }}
@@ -129,8 +129,23 @@ const toggleMobileMenu = () => {
 
 <style scoped>
 .mobile-menu-item {
-  animation-delay: var(--animation-delay);
   animation: slideInFromRight 0.3s ease-out forwards;
+}
+
+.mobile-menu-item-0 {
+  animation-delay: 0ms;
+}
+
+.mobile-menu-item-1 {
+  animation-delay: 50ms;
+}
+
+.mobile-menu-item-2 {
+  animation-delay: 100ms;
+}
+
+.mobile-menu-item-3 {
+  animation-delay: 150ms;
 }
 
 @keyframes slideInFromRight {
