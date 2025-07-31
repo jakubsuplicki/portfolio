@@ -85,6 +85,7 @@
 <script setup lang="ts">
 import { User, Briefcase } from 'lucide-vue-next'
 import { useResumeStore } from '@/store/resumeStore'
+import type { ResumeSelection } from '@/types/resume'
 
 const resumeStore = useResumeStore()
 

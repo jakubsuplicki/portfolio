@@ -121,6 +121,7 @@
 import { computed } from 'vue'
 import { ArrowLeft, FileText, Briefcase, Code, Users, Zap, Target } from 'lucide-vue-next'
 import { useResumeStore } from '@/store/resumeStore'
+import type { ResumeSelection } from '@/types/resume'
 
 const resumeStore = useResumeStore()
 

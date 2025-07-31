@@ -123,6 +123,7 @@ import { ref, onMounted } from 'vue'
 import { ExternalLink, Briefcase, Code, Award, CheckCircle, ArrowLeft } from 'lucide-vue-next'
 import { projects } from '@/config/projects'
 import { useResumeStore } from '@/store/resumeStore'
+import type { ResumeSelection } from '@/types/resume'
 
 const projectsContainer = ref<HTMLElement>()
 

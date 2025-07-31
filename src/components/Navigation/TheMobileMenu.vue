@@ -14,6 +14,7 @@
 <script lang="ts">
 import { useResumeStore } from '@/store/resumeStore'
 import { defineComponent } from 'vue'
+import type { ResumeSelection } from '@/types/resume'
 
 export default defineComponent({
   name: 'TheMobileMenu',
