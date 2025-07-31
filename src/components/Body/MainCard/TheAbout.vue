@@ -66,18 +66,18 @@
           </div>
 
           <!-- Stats Grid -->
-          <div class="grid grid-cols-3 gap-6 text-center">
-            <div class="space-y-3 p-6 bg-white/10 dark:bg-slate-800/20 rounded-2xl backdrop-blur-sm border border-white/20 dark:border-slate-700/20">
-              <div class="text-4xl font-bold text-primary-500">{{ yearsOfExperience }}+</div>
-              <div class="text-slate-600 dark:text-slate-400 font-medium">Years Experience</div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
+            <div class="space-y-2 sm:space-y-3 p-4 sm:p-6 bg-white/10 dark:bg-slate-800/20 rounded-2xl backdrop-blur-sm border border-white/20 dark:border-slate-700/20">
+              <div class="text-3xl sm:text-4xl font-bold text-primary-500">{{ yearsOfExperience }}+</div>
+              <div class="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-medium">Years Experience</div>
             </div>
-            <div class="space-y-3 p-6 bg-white/10 dark:bg-slate-800/20 rounded-2xl backdrop-blur-sm border border-white/20 dark:border-slate-700/20">
-              <div class="text-4xl font-bold text-primary-500">10+</div>
-              <div class="text-slate-600 dark:text-slate-400 font-medium">Projects Completed</div>
+            <div class="space-y-2 sm:space-y-3 p-4 sm:p-6 bg-white/10 dark:bg-slate-800/20 rounded-2xl backdrop-blur-sm border border-white/20 dark:border-slate-700/20">
+              <div class="text-3xl sm:text-4xl font-bold text-primary-500">10+</div>
+              <div class="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-medium">Projects Completed</div>
             </div>
-            <div class="space-y-3 p-6 bg-white/10 dark:bg-slate-800/20 rounded-2xl backdrop-blur-sm border border-white/20 dark:border-slate-700/20">
-              <div class="text-4xl font-bold text-primary-500">50+</div>
-              <div class="text-slate-600 dark:text-slate-400 font-medium">Technologies</div>
+            <div class="space-y-2 sm:space-y-3 p-4 sm:p-6 bg-white/10 dark:bg-slate-800/20 rounded-2xl backdrop-blur-sm border border-white/20 dark:border-slate-700/20">
+              <div class="text-3xl sm:text-4xl font-bold text-primary-500">50+</div>
+              <div class="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-medium">Technologies</div>
             </div>
           </div>
         </div>
