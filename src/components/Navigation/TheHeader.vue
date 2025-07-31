@@ -80,9 +80,9 @@
             'w-full text-left px-3 sm:px-4 py-2 sm:py-3 rounded-lg font-medium transition-all duration-200 flex items-center text-sm sm:text-base transform mobile-menu-item',
             getSelection === item.key
               ? 'bg-primary-500 text-white shadow-lg'
-              : 'text-slate-700 dark:text-slate-300 hover:bg-white/20 dark:hover:bg-slate-800/20',
-            getMobileMenuItemClass(index)
+              : 'text-slate-700 dark:text-slate-300 hover:bg-white/20 dark:hover:bg-slate-800/20'
           ]"
+          :data-index="index"
         >
           <component :is="item.icon" class="w-4 h-4 mr-2 sm:mr-3" />
           {{ item.label }}
@@ -125,11 +125,6 @@ const toggleTheme = () => {
 const toggleMobileMenu = () => {
   showMobileMenu.value = !showMobileMenu.value
 }
-
-const getMobileMenuItemClass = (index: number) => {
-  const classes = ['mobile-menu-item-0', 'mobile-menu-item-1', 'mobile-menu-item-2', 'mobile-menu-item-3']
-  return classes[index] || 'mobile-menu-item-0'
-}
 </script>
 
 <style scoped>
@@ -137,19 +132,19 @@ const getMobileMenuItemClass = (index: number) => {
   animation: slideInFromRight 0.3s ease-out forwards;
 }
 
-.mobile-menu-item-0 {
+.mobile-menu-item[data-index="0"] {
   animation-delay: 0ms;
 }
 
-.mobile-menu-item-1 {
+.mobile-menu-item[data-index="1"] {
   animation-delay: 50ms;
 }
 
-.mobile-menu-item-2 {
+.mobile-menu-item[data-index="2"] {
   animation-delay: 100ms;
 }
 
-.mobile-menu-item-3 {
+.mobile-menu-item[data-index="3"] {
   animation-delay: 150ms;
 }
 
