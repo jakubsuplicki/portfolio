@@ -59,7 +59,36 @@
       </div>
     </div>
 
-
+    <!-- Mobile Menu -->
+    <Transition
+      enter-active-class="transition-all duration-300 ease-out"
+      enter-from-class="opacity-0 max-h-0"
+      enter-to-class="opacity-100 max-h-96"
+      leave-active-class="transition-all duration-200 ease-in"
+      leave-from-class="opacity-100 max-h-96"
+      leave-to-class="opacity-0 max-h-0"
+    >
+      <div
+        v-if="showMobileMenu"
+        class="md:hidden border-t border-white/20 dark:border-slate-700/20 px-4 sm:px-6 py-3 sm:py-4 space-y-2 overflow-hidden"
+      >
+        <button
+          v-for="(item, index) in navigationItems"
+          :key="item.key"
+          @click="handleMobileMenuSelection(item.key)"
+          :class="[
+            'w-full text-left px-3 sm:px-4 py-2 sm:py-3 rounded-lg font-medium transition-all duration-200 flex items-center text-sm sm:text-base transform mobile-menu-item',
+            getSelection === item.key
+              ? 'bg-primary-500 text-white shadow-lg'
+              : 'text-slate-700 dark:text-slate-300 hover:bg-white/20 dark:hover:bg-slate-800/20'
+          ]"
+          :data-index="index"
+        >
+          <component :is="item.icon" class="w-4 h-4 mr-2 sm:mr-3" />
+          {{ item.label }}
+        </button>
+      </div>
+    </Transition>
   </nav>
 </template>
 
@@ -96,6 +125,11 @@ const toggleTheme = () => {
 
 const toggleMobileMenu = () => {
   showMobileMenu.value = !showMobileMenu.value
+}
+
+const handleMobileMenuSelection = (selection: string) => {
+  changeSelection(selection)
+  showMobileMenu.value = false
 }
 </script>
 
