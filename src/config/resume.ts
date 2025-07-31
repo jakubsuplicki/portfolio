@@ -5,7 +5,7 @@ export const resumeSkills = [
   {
     title: 'Languages',
     icon: ['fas', 'code'],
-    skills: ['JavaScript', 'CSS3', 'HTML5', 'TypeScript', 'PHP', 'YAML', 'SQL']
+    skills: ['JavaScript', 'CSS3', 'HTML5', 'TypeScript', 'Python', 'PHP', 'YAML', 'SQL']
   },
   {
     title: 'Frontend',
@@ -41,13 +41,14 @@ export const resumeSkills = [
       'Ajax',
       'Axios',
       'AWS SDK',
+      'Firebase',
       'AWS (EC2, Elastic Beanstalk, S3, CloudWatch, Lambda, SNS/SQS, StepFunctions, IAM, Route53)'
     ]
   },
   {
     title: 'Database Systems',
     icon: ['fas', 'database'],
-    skills: ['MongoDB', 'Mongoose', 'MySQL', 'Oracle SQL', 'DynamoDB', 'PostgreSQL', 'Sequelize']
+    skills: ['MongoDB', 'Mongoose', 'MySQL', 'Oracle SQL', 'DynamoDB', 'PostgreSQL', 'Sequelize', 'SQLite']
   },
   {
     title: 'Development Tools',
@@ -111,8 +112,32 @@ export const resumeSkills = [
 export const professionalExperience = [
   {
     title: 'Senior Full Stack Developer (Contract)',
-    location: 'Contractor for TAFE NSW, via Digitality',
-    date: 'October 2022 - Present',
+    location: 'TAFE NSW',
+    date: 'August 2024 - Present',
+    icon: ['fas', 'keyboard']
+  },
+  {
+    title: 'Founder',
+    location: 'Zen Zero Pty Ltd',
+    date: 'May 2025 - Present',
+    icon: ['fas', 'rocket']
+  },
+  {
+    title: 'Technical Lead',
+    location: 'Navitas',
+    date: 'February 2024 - July 2024',
+    icon: ['fas', 'users']
+  },
+  {
+    title: 'Integrations Developer',
+    location: 'Navitas',
+    date: 'October 2023 - February 2024',
+    icon: ['fas', 'code-branch']
+  },
+  {
+    title: 'Senior Full Stack Developer (Contract)',
+    location: 'TAFE NSW',
+    date: 'October 2022 - September 2023',
     icon: ['fas', 'keyboard']
   },
   {
