@@ -1,148 +1,80 @@
 <template>
-  <article class="home">
-    <transition-group name="home_animate">
+  <div class="min-h-screen">
+    <transition
+      name="fade"
+      mode="out-in"
+      @enter="onEnter"
+      @leave="onLeave"
+    >
+      <!-- Landing/About Section -->
       <div
         v-if="getSelection === 'about' || getSelection === 'landing'"
-        class="home__main-container"
+        key="main"
+        class="w-full"
       >
-        <the-main />
+        <TheMain />
       </div>
-      <the-resume v-else-if="getSelection === 'resume'" />
-      <the-projects v-else-if="getSelection === 'projects'" />
-    </transition-group>
-  </article>
+
+      <!-- Resume Section -->
+      <div
+        v-else-if="getSelection === 'resume'"
+        key="resume"
+        class="w-full min-h-screen"
+      >
+        <TheResume />
+      </div>
+
+      <!-- Projects Section -->
+      <div
+        v-else-if="getSelection === 'projects'"
+        key="projects"
+        class="w-full min-h-screen"
+      >
+        <TheProjects />
+      </div>
+    </transition>
+  </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
+import { computed } from 'vue'
 import TheMain from '@/components/Body/TheMain.vue'
 import TheProjects from '@/components/Body/TheProjects.vue'
 import TheResume from '@/components/Body/TheResume.vue'
 import { useResumeStore } from '@/store/resumeStore'
 
-export default defineComponent({
-  components: {
-    TheMain,
-    TheProjects,
-    TheResume
-  },
-  computed: {
-    getSelection() {
-      const store = useResumeStore()
-      return store.getSelection
-    }
-  }
-})
+const resumeStore = useResumeStore()
+
+const getSelection = computed(() => resumeStore.getSelection)
+
+const onEnter = (el: Element) => {
+  const element = el as HTMLElement
+  element.style.opacity = '0'
+  
+  setTimeout(() => {
+    element.style.transition = 'opacity 0.5s ease-in-out'
+    element.style.opacity = '1'
+  }, 50)
+}
+
+const onLeave = (el: Element) => {
+  const element = el as HTMLElement
+  element.style.transition = 'opacity 0.3s ease-in-out'
+  element.style.opacity = '0'
+}
 </script>
 
-<style lang="scss" scoped>
-.home {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  overflow: hidden;
-  &__main-container {
-    height: calc(100vh - 16rem);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-.flip {
-  position: relative;
-  width: 85vw;
-  height: 48rem;
-  padding-bottom: 2rem;
-  transform: perspective(1000px) rotateY(0deg);
-  margin: 2rem 0;
-  transform-style: preserve-3d;
-  z-index: 1;
-  &__each {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: $color-secondary;
-    opacity: 0.9;
-
-    transform: rotateY(0deg);
-    transform-style: preserve-3d;
-    z-index: 1;
-    &--front,
-    &--back {
-      transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
-      backface-visibility: hidden;
-      overflow: hidden;
-      position: absolute;
-      top: 0;
-    }
-    &--front {
-      transform: rotateY(0deg);
-      transform-style: preserve-3d;
-      z-index: 1;
-    }
-    &--back {
-      transform: rotateY(180deg);
-      transform-style: preserve-3d;
-      z-index: 1;
-    }
-    &--rotate-front {
-      transform: rotateY(-180deg);
-      transform-style: preserve-3d;
-    }
-    &--rotate-back {
-      transform: rotateY(0deg);
-      transform-style: preserve-3d;
-    }
-  }
-}
-
-.home_animate-enter {
-  opacity: 0;
-}
-.home_animate-leave-to {
-  opacity: 0;
-}
-.home_animate-enter-to {
-  opacity: 1;
-}
-.home_animate-leave {
-  opacity: 0;
-}
-.home_animate-enter-active {
-  animation: slide-in 1s ease-out forwards;
+<style scoped>
+.fade-enter-active {
   transition: opacity 0.5s ease-in-out;
 }
 
-.home_animate-leave-active {
-  animation: slide-out 1s ease-out forwards;
-  transition: opacity 0.5s ease-in-out;
+.fade-leave-active {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
   opacity: 0;
-  position: absolute;
-  z-index: -1;
-}
-
-.home_animate-move {
-  transition: transform cubic-bezier(0.47, 0, 0.745, 0.715);
-}
-
-@keyframes slide-in {
-  from {
-    transform: translateY(5rem);
-  }
-
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes slide-out {
-  from {
-    transform: translateY(0);
-  }
-
-  to {
-    transform: translateY(5rem);
-  }
 }
 </style>
