@@ -1,6 +1,6 @@
 <template>
   <transition name="mobile_menu_activate">
-    <div class="modal-outer">
+    <div v-if="show" class="modal-outer">
       <div class="modal-backdrop" @click="$emit('close')"></div>
       <div class="modal" role="dialog">
         <header class="modal__header">
@@ -20,7 +20,13 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'TheModal'
+  name: 'TheModal',
+  props: {
+    show: {
+      type: Boolean,
+      default: false
+    }
+  }
 })
 </script>
 
