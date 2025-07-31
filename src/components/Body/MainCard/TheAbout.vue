@@ -8,7 +8,7 @@
         <p>
           An ambitious people-oriented full stack developer, with a passion for working on complex
           and engaging projects in a time-sensitive and fast-paced work environment. Professional
-          experience of over 5 years in designing, developing, testing, automating, integrating, and
+          experience of over {{ yearsOfExperience }} years in designing, developing, testing, automating, integrating, and
           deploying enterprise applications.
         </p>
         <p>
@@ -33,6 +33,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'TheAbout',
+  computed: {
+    yearsOfExperience(): number {
+      return new Date().getFullYear() - 2018
+    }
+  },
   methods: {
     changeSelection(selection: ResumeSelection) {
       const store = useResumeStore()
