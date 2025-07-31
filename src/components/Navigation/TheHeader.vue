@@ -1,277 +1,144 @@
 <template>
-  <header class="header">
-    <div class="header__left" @click="changeSelection('landing')">
-      <h1>
-        <span><font-awesome-icon :icon="['fas', 'long-arrow-alt-right']" /></span>J. Suplicki
-      </h1>
-      <p class="header__self-type">
-        <span class="header__self-type--word">{{ currentTitle }} </span>
-        <span class="header__self-type--line"></span>
-      </p>
-    </div>
-    <div class="header__right">
-      <ul class="header__navigation-list">
-        <li @click="changeSelection('landing')">Home</li>
-        <li @click="changeSelection('about')">About Me</li>
-        <li @click="changeSelection('resume')">Resume</li>
-        <li @click="changeSelection('projects')">Projects</li>
-      </ul>
-      <div
-        class="menu menu__closed"
-        @click="isMobileMenu = !isMobileMenu"
-        :class="{ menu__active: isMobileMenu }"
-      >
-        <div
-          class="menu__line menu__top-line"
-          :class="{
-            'menu__top-line--active': isMobileMenu,
-            'menu__line--active': isMobileMenu
-          }"
-        ></div>
-        <div
-          class="menu__line menu__mid-line"
-          :class="{
-            'menu__mid-line--active': isMobileMenu,
-            'menu__line--active': isMobileMenu
-          }"
-        ></div>
-        <div
-          class="menu__line menu__bot-line"
-          :class="{
-            'menu__bot-line--active': isMobileMenu,
-            'menu__line--active': isMobileMenu
-          }"
-        ></div>
+  <nav class="glass-card mx-2 sm:mx-4 mt-2 sm:mt-4">
+    <div class="flex items-center justify-between py-3 sm:py-4 px-4 sm:px-6">
+      <div class="flex items-center">
+        <button
+          @click="toggleTheme"
+          class="md:hidden p-3 rounded-lg bg-white/30 dark:bg-slate-800/40 backdrop-blur-sm border border-white/40 dark:border-slate-600/40 hover:bg-white/40 dark:hover:bg-slate-700/50 transition-all duration-200 shadow-sm"
+          :title="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+        >
+          <Sun v-if="isDark" class="w-5 h-5" />
+          <Moon v-else class="w-5 h-5" />
+        </button>
+      </div>
+
+      <!-- Center: Navigation Menu (desktop only) -->
+      <div class="hidden md:flex items-center space-x-1">
+        <button
+          v-for="item in navigationItems"
+          :key="item.key"
+          @click="changeSelection(item.key)"
+          :class="[
+            'px-3 lg:px-4 py-2 rounded-lg font-medium transition-all duration-200 text-sm lg:text-base flex items-center',
+            getSelection === item.key
+              ? 'bg-primary-500 text-white shadow-lg'
+              : 'text-slate-700 dark:text-slate-300 hover:bg-white/20 dark:hover:bg-slate-800/20'
+          ]"
+        >
+          <component :is="item.icon" class="w-4 h-4 mr-1 lg:mr-2" />
+          {{ item.label }}
+        </button>
+      </div>
+
+      <!-- Right side: Theme Toggle (desktop) & Mobile Menu -->
+      <div class="flex items-center space-x-2 sm:space-x-3">
+        <!-- Theme Toggle - visible on desktop only -->
+        <button
+          @click="toggleTheme"
+          class="hidden md:block p-2 sm:p-2.5 rounded-lg bg-white/10 dark:bg-slate-800/10 backdrop-blur-sm border border-white/20 dark:border-slate-700/20 hover:bg-white/20 dark:hover:bg-slate-800/20 transition-all duration-200"
+          :title="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+        >
+          <Sun v-if="isDark" class="w-4 h-4 sm:w-5 sm:h-5" />
+          <Moon v-else class="w-4 h-4 sm:w-5 sm:h-5" />
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button
+          @click="toggleMobileMenu"
+          class="md:hidden p-3 rounded-lg bg-white/30 dark:bg-slate-800/40 backdrop-blur-sm border border-white/40 dark:border-slate-600/40 hover:bg-white/40 dark:hover:bg-slate-700/50 transition-all duration-200 shadow-sm"
+        >
+          <Menu 
+            v-if="!showMobileMenu"
+            class="w-5 h-5 transition-transform duration-200" 
+          />
+          <X 
+            v-else
+            class="w-5 h-5 transition-transform duration-200" 
+          />
+        </button>
       </div>
     </div>
-    <transition name="fade">
-      <the-mobile-menu
-        v-if="isMobileMenu"
-        :isMobileMenu="isMobileMenu"
-        @close="isMobileMenu = !isMobileMenu"
-      />
-    </transition>
-  </header>
+
+    <!-- Mobile Menu -->
+    <Transition
+      enter-active-class="transition-all duration-300 ease-out"
+      enter-from-class="opacity-0 max-h-0"
+      enter-to-class="opacity-100 max-h-96"
+      leave-active-class="transition-all duration-200 ease-in"
+      leave-from-class="opacity-100 max-h-96"
+      leave-to-class="opacity-0 max-h-0"
+    >
+      <div
+        v-if="showMobileMenu"
+        class="md:hidden border-t border-white/20 dark:border-slate-700/20 px-4 sm:px-6 py-3 sm:py-4 space-y-2 overflow-hidden"
+      >
+        <button
+          v-for="(item, index) in navigationItems"
+          :key="item.key"
+          @click="changeSelection(item.key); showMobileMenu = false"
+          :class="[
+            'w-full text-left px-3 sm:px-4 py-2 sm:py-3 rounded-lg font-medium transition-all duration-200 flex items-center text-sm sm:text-base transform',
+            getSelection === item.key
+              ? 'bg-primary-500 text-white shadow-lg'
+              : 'text-slate-700 dark:text-slate-300 hover:bg-white/20 dark:hover:bg-slate-800/20'
+          ]"
+          :style="{ 
+            animationDelay: `${index * 50}ms`,
+            animation: showMobileMenu ? 'slideInFromRight 0.3s ease-out forwards' : 'none'
+          }"
+        >
+          <component :is="item.icon" class="w-4 h-4 mr-2 sm:mr-3" />
+          {{ item.label }}
+        </button>
+      </div>
+    </Transition>
+  </nav>
 </template>
 
-<script lang="ts">
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
-library.add(faLongArrowAltRight)
-
-import { defineComponent } from 'vue'
-import TheMobileMenu from '@/components/Navigation/TheMobileMenu.vue'
+<script setup lang="ts">
+import { ref, computed } from 'vue'
+import { User, Home, FileText, Briefcase, Sun, Moon, Menu, X } from 'lucide-vue-next'
 import { useResumeStore } from '@/store/resumeStore'
+import { useThemeStore } from '@/store/themeStore'
 
-export default defineComponent({
-  name: 'TheHeader',
-  components: {
-    TheMobileMenu
-  },
-  data() {
-    return {
-      isMobileMenu: false,
-      titles: ['Full Stack Developer', 'Tech Geek', 'Cyclist', 'In House Dj'],
-      currentTitle: ''
-    }
-  },
-  methods: {
-    async typeTitle() {
-      const delay = (time: number) => {
-        return new Promise((resolve) => {
-          setTimeout(() => {
-            resolve(true)
-          }, time)
-        })
-      }
-      let titleCounter = 0
-      for (const title of this.titles) {
-        const letters = title.split('')
-        this.currentTitle = ''
-        let counter = 0
-        //write word
-        while (counter !== letters.length) {
-          for (const letter of letters) {
-            this.currentTitle += letter
-            await delay(Math.floor(Math.random() * 100) + 50)
-            counter++
-          }
-        }
-        await delay(2000)
-        //remove word
-        while (this.currentTitle.length !== 0) {
-          this.currentTitle = this.currentTitle.substring(0, this.currentTitle.length - 1)
-          await delay(30)
-        }
-        await delay(1500)
-        titleCounter++
-        //restart method
-        if (this.titles.length === titleCounter) {
-          this.typeTitle()
-        }
-      }
-    },
-    changeSelection(selection: ResumeSelection) {
-      const store = useResumeStore()
-      store.changeSelection(selection)
-    }
-  },
-  mounted() {
-    this.typeTitle()
-  }
-})
+const resumeStore = useResumeStore()
+const themeStore = useThemeStore()
+
+const showMobileMenu = ref(false)
+
+const getSelection = computed(() => resumeStore.getSelection)
+const isDark = computed(() => themeStore.isDark)
+
+const navigationItems = [
+  { key: 'landing', label: 'Home', icon: Home },
+  { key: 'about', label: 'About', icon: User },
+  { key: 'resume', label: 'Resume', icon: FileText },
+  { key: 'projects', label: 'Projects', icon: Briefcase },
+]
+
+const changeSelection = (selection: string) => {
+  resumeStore.changeSelection(selection as ResumeSelection)
+}
+
+const toggleTheme = () => {
+  themeStore.toggleTheme()
+  themeStore.saveTheme()
+}
+
+const toggleMobileMenu = () => {
+  showMobileMenu.value = !showMobileMenu.value
+}
 </script>
 
-<style scoped lang="scss">
-.header {
-  height: 6rem;
-  justify-content: space-between;
-  padding: 0 1rem;
-  @include respond(tab-land) {
-    padding: 0;
+<style scoped>
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
   }
-  &__left {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    h1 {
-      display: flex;
-      align-items: center;
-      color: $color-light;
-      margin-right: 0.5rem;
-      span {
-        content: '';
-        display: block;
-        border-radius: $radius-main;
-        color: $color-main-light;
-        margin-right: 1rem;
-        font-size: 1.6rem;
-      }
-    }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
-  &__self-type {
-    display: flex;
-    font-size: 1.6rem;
-    color: $color-main-light;
-    &--line {
-      margin-left: 0.1rem;
-      display: block;
-      position: relative;
-      width: 0.5rem;
-      height: 1.6rem;
-      background-color: $color-light;
-      animation: blink 1s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
-    }
-    @keyframes blink {
-      0% {
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-      }
-    }
-  }
-  &__navigation-list {
-    display: none;
-    @include respond(tab-land) {
-      display: flex;
-      list-style: none;
-      li {
-        margin: 0 1rem;
-        cursor: pointer;
-      }
-    }
-  }
-  .menu {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    z-index: 101;
-    &__line {
-      position: relative;
-      display: block;
-      width: 3rem;
-      height: 0.4rem;
-      background-color: $color-light;
-      margin: 10% auto;
-      border-radius: $radius-main;
-      transition: all 0.2s ease-in-out;
-      &--active {
-        margin: 0;
-      }
-    }
-    &__top-line {
-      &--active {
-        transform: rotate(45deg);
-        transition-delay: 0.2s;
-        top: 0.4rem;
-      }
-    }
-    &__mid-line {
-      animation: bump 1s;
-      &--active {
-        width: 0rem;
-        animation: shrink 0.2s;
-      }
-    }
-    &__bot-line {
-      &--active {
-        transform: rotate(-45deg);
-        transition-delay: 0.2s;
-        top: -0.4rem;
-      }
-    }
-    @keyframes shrink {
-      0% {
-        left: 0rem;
-        width: 3rem;
-      }
-      30% {
-        left: 0.5rem;
-        width: 2rem;
-      }
-      60% {
-        left: 1rem;
-        width: 1rem;
-      }
-      100% {
-        left: 1.5rem;
-        width: 0;
-      }
-    }
-    @keyframes bump {
-      0% {
-        transform: scale(0.3);
-      }
-      30% {
-        transform: scale(1.2);
-      }
-      60% {
-        transform: scale(0.9);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-    @include respond(tab-land) {
-      display: none;
-    }
-  }
-}
-
-// animate mobile menu
-
-.mobile_menu_activate-enter-active,
-.mobile_menu_activate-leave-active {
-  transition: opacity 0.4s ease;
-}
-
-.mobile_menu_activate-enter-from,
-.mobile_menu_activate-leave-to {
-  opacity: 0;
 }
 </style>
