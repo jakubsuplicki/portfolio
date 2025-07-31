@@ -1,70 +1,48 @@
 <template>
-  <footer class="footer">
-    <div class="media">
-      <div class="media__icons">
-        <a href="https://stackoverflow.com/users/6170233/jakub-a-suplicki" target="_blank"
-          ><font-awesome-icon :icon="['fab', 'stack-overflow']"
-        /></a>
-        <a href="https://codepen.io/jakub-suplicki/pens/popular" target="_blank"
-          ><font-awesome-icon :icon="['fab', 'codepen']"
-        /></a>
-        <a href="https://github.com/jakubsuplicki" target="_blank"
-          ><font-awesome-icon :icon="['fab', 'github']"
-        /></a>
-        <a href="https://www.linkedin.com/in/jakub-suplicki/" target="_blank"
-          ><font-awesome-icon :icon="['fab', 'linkedin']"
-        /></a>
+  <div class="glass-card mx-2 sm:mx-4 mb-2 sm:mb-4">
+    <div class="flex flex-col sm:flex-row items-center justify-between py-3 sm:py-4 px-4 sm:px-6 space-y-3 sm:space-y-0">
+      <!-- Copyright -->
+      <div class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+        © {{ currentYear }} Portfolio
+      </div>
+
+      <!-- Social Links -->
+      <div class="flex items-center space-x-3 sm:space-x-4">
+        <a
+          v-for="social in socialLinks"
+          :key="social.name"
+          :href="social.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="p-2 rounded-lg bg-white/10 dark:bg-slate-800/10 backdrop-blur-sm border border-white/20 dark:border-slate-700/20 hover:bg-white/20 dark:hover:bg-slate-800/20 transition-all duration-200 hover:scale-110"
+          :title="social.name"
+        >
+          <component :is="social.icon" class="w-4 h-4 sm:w-5 sm:h-5" />
+        </a>
       </div>
     </div>
-  </footer>
+  </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import {
-  faStackOverflow,
-  faCodepen,
-  faLinkedin,
-  faGithub
-} from '@fortawesome/free-brands-svg-icons'
-library.add(faStackOverflow, faCodepen, faLinkedin, faGithub)
+<script setup lang="ts">
+import { computed } from 'vue'
+import { Github, Linkedin } from 'lucide-vue-next'
 
-export default defineComponent({
-  name: 'TheNavigator'
-})
+const currentYear = computed(() => new Date().getFullYear())
+
+const socialLinks = [
+  {
+    name: 'GitHub',
+    url: 'https://github.com/jakubsuplicki',
+    icon: Github
+  },
+  {
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/jakub-suplicki/',
+    icon: Linkedin
+  },
+
+]
+
+
 </script>
-
-<style scoped lang="scss">
-.footer {
-  height: 6rem;
-  justify-content: center;
-  @include respond(tab-land) {
-    height: 8rem;
-  }
-  &__contact {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    div {
-      display: flex;
-      flex-direction: column;
-      p {
-        margin-top: 1rem;
-      }
-    }
-  }
-}
-.media {
-  width: 45%;
-  margin: auto;
-  a {
-    color: white;
-    font-size: 1.8rem;
-  }
-  &__icons {
-    display: flex;
-    justify-content: space-around;
-  }
-}
-</style>
