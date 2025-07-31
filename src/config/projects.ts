@@ -1,5 +1,32 @@
 export const projects = [
   {
+    title: 'Tickado - Task Management Mobile App',
+    description:
+      'A privacy-focused mobile task management application built with React Native, designed to help users stay organised with smart task tracking, powerful reminders, and customisable organisation features. Built with an offline-first approach and optional cloud backups.',
+    tools: [
+      'React Native',
+      'TypeScript',
+      'Firebase',
+      'SQLite',
+      'JavaScript',
+      'Mobile Development',
+      'Cloud Storage',
+      'Offline-First Architecture'
+    ],
+    achievements: [
+      'Successfully launched on both Android and iOS platforms as a side project while working full-time as a software engineer.',
+      'Implemented smart task tracking with custom recurrence and completion tracking features.',
+      'Built powerful reminder system with flexible, recurring notifications to ensure timely task completion.',
+      'Designed privacy-focused experience with no ads, no pop-ups, and no data selling for zero interruptions.',
+      'Created premium features including unlimited lists, cloud backups, and beautiful themes via one-time purchase model.',
+      'Developed offline-first architecture with local SQLite database and optional Firebase cloud backups for flexibility.'
+    ],
+    links: [
+      { url: 'https://play.google.com/store/apps/details?id=com.zenzero.tickado', text: 'Android App Store' },
+      { url: 'https://apps.apple.com/us/app/tickado/id6743649903', text: 'iOS App Store' }
+    ]
+  },
+  {
     title: 'TAFE NSW',
     description:
       'The TAFE NSW project is an advanced online platform designed to streamline and automate student enrolment, encapsulating a seamless, system-guided workflow for the entire admission process.',
@@ -136,15 +163,6 @@ export const projects = [
         'Led the technology strategy and played a key role in the creation of the application. Evaluated and became knowledgeable in new technologies, standards, and trends in web application development.'
       ]
     },
-    links: {
-      title: 'Link',
-      urls: [
-        {
-          text: 'iSubbie',
-          href: 'https://isubbie.com.au'
-        }
-      ]
-    }
   },
   {
     title: 'Breakdowns app',
