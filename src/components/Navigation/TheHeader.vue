@@ -81,7 +81,7 @@
             getSelection === item.key
               ? 'bg-primary-500 text-white shadow-lg'
               : 'text-slate-700 dark:text-slate-300 hover:bg-white/20 dark:hover:bg-slate-800/20',
-            `mobile-menu-item-${index}`
+            getMobileMenuItemClass(index)
           ]"
         >
           <component :is="item.icon" class="w-4 h-4 mr-2 sm:mr-3" />
@@ -124,6 +124,11 @@ const toggleTheme = () => {
 
 const toggleMobileMenu = () => {
   showMobileMenu.value = !showMobileMenu.value
+}
+
+const getMobileMenuItemClass = (index: number) => {
+  const classes = ['mobile-menu-item-0', 'mobile-menu-item-1', 'mobile-menu-item-2', 'mobile-menu-item-3']
+  return classes[index] || 'mobile-menu-item-0'
 }
 </script>
 
