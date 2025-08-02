@@ -53,6 +53,34 @@ export const projects = [
     links: [{ url: 'https://www.tafensw.edu.au/', text: 'TAFE NSW' }]
   },
   {
+    title: 'Navitas - System Migration & Integration',
+    description:
+      'Led a development team through comprehensive legacy system modernisation, driving the migration of critical features to modern cloud frameworks. Mentored team members and delivered complex system integrations while maintaining operational stability throughout the transformation process.',
+    tools: [
+      'System Integration',
+      'Legacy Migration',
+      'Team Leadership',
+      'Technical Implementation',
+      'Architecture Review',
+      'Cloud Frameworks',
+      'Feature Migration',
+      'Hands-on Development'
+    ],
+    achievements: [
+      'Led a development team through multiple feature migrations as part of a larger modernisation initiative across different teams.',
+      'Collaborated with architects and solutions engineers to understand complex system designs, providing technical feedback and implementation insights.',
+      'Mentored team members and provided technical leadership during hands-on implementation of migration work.',
+      'Successfully delivered assigned feature migrations while maintaining system stability and operational continuity.',
+      'Identified timelines and managed delivery risks for team-specific migration roadmaps.',
+      'Independently planned technical work for deeply complex migration tickets within the team scope.',
+      'Identified skill gaps within the team and coached members to fill knowledge gaps effectively.',
+      'Communicated team progress, limitations, and resource needs to stakeholders and defended technical decisions.',
+      'Solved complex technical problems requiring deep understanding of both legacy and modern systems.',
+      'Maintained holistic understanding of business requirements and system architecture to ensure successful feature transitions.'
+    ],
+    links: [{ url: 'https://www.navitas.com/', text: 'Navitas' }]
+  },
+  {
     title: 'The West Australian, Perthnow, 7news',
     description:
       'A monorepo of news websites that serves all 3 mastheads and regional sites plus a range of serverless microservices.',
@@ -75,7 +103,7 @@ export const projects = [
     ],
     achievements: [
       'Successfully collaborated with the team and delivered multiple projects with a tight deadline. Regularly received very positive feedback from stakeholders, managers, and the team, including shout-outs of the month.',
-      'Worked in different areas of the organisation and became knowledgeable across the tech stack and company’s development patterns. Took ownership and lead multiple initiatives.'
+      "Worked in different areas of the organisation and became knowledgeable across the tech stack and company's development patterns. Took ownership and lead multiple initiatives."
     ],
     links: [
       { url: 'https://thewest.com.au', text: 'The West' },
@@ -162,7 +190,7 @@ export const projects = [
         'Received positive feedback from stakeholders on a project that was successfully delivered on time and on budget. Developed a stable application with no critical or high severity issues in production since go-live. Anticipated increase in business revenue and reduction in cost – circa 40%.',
         'Led the technology strategy and played a key role in the creation of the application. Evaluated and became knowledgeable in new technologies, standards, and trends in web application development.'
       ]
-    },
+    }
   },
   {
     title: 'Breakdowns app',
