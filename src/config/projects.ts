@@ -1,6 +1,6 @@
 export const projects = [
   {
-    title: 'Tickado - Task Management Mobile App',
+    title: 'Tickmeek - Task Management Mobile App',
     description:
       'A privacy-focused mobile task management application built with React Native, designed to help users stay organised with smart task tracking, powerful reminders, and customisable organisation features. Built with an offline-first approach and optional cloud backups.',
     tools: [
@@ -23,7 +23,7 @@ export const projects = [
     ],
     links: [
       { url: 'https://play.google.com/store/apps/details?id=com.zenzero.tickado', text: 'Android App Store' },
-      { url: 'https://apps.apple.com/us/app/tickado/id6743649903', text: 'iOS App Store' }
+      { url: 'https://apps.apple.com/us/app/tickmeek/id6743649903', text: 'iOS App Store' }
     ]
   },
   {
