@@ -158,7 +158,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { Code, User, BookOpen, CheckCircle, Database, Settings, Layers, Zap, Clock, Eye, Sparkles, Timer, Briefcase, GraduationCap, ArrowLeft } from 'lucide-vue-next'
+import { Code, User, BookOpen, CheckCircle, Database, Settings, Layers, Zap, Clock, Eye, Sparkles, Timer, Briefcase, GraduationCap, ArrowLeft, Cpu } from 'lucide-vue-next'
 import TheResumeSection from './TheResumeSection.vue'
 import { useResumeStore } from '@/store/resumeStore'
 import type { ResumeSelection } from '@/types/resume'
@@ -181,6 +181,7 @@ const changeSelection = (selection: string) => {
 
 const getSkillIcon = (skillTitle: string) => {
   const iconMap: Record<string, any> = {
+    'AI & Data': Cpu,
     'Languages': Code,
     'Frontend': Code,
     'Backend': Code,

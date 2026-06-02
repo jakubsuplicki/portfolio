@@ -1,44 +1,112 @@
-export const projects = [
+import altaflipLogo from '@/assets/images/apps/altaflip.png'
+import dreamlusiveLogo from '@/assets/images/apps/dreamlusive.png'
+import tickmeekLogo from '@/assets/images/apps/tickmeek.png'
+import type { AppProject, OpenSourceProject } from '@/types/project'
+
+// Personal mobile apps — solo-built and shipped end to end (design, dev, ASO, marketing, monetisation).
+export const apps: AppProject[] = [
   {
-    title: 'Tickmeek - Task Management Mobile App',
+    name: 'Altaflip',
+    tagline: 'Sauna, cold-plunge & contrast-therapy tracker',
     description:
-      'A privacy-focused mobile task management application built with React Native, designed to help users stay organised with smart task tracking, powerful reminders, and customisable organisation features. Built with an offline-first approach and optional cloud backups.',
-    tools: [
-      'React Native',
-      'TypeScript',
-      'Firebase',
-      'SQLite',
-      'JavaScript',
-      'Mobile Development',
-      'Cloud Storage',
-      'Offline-First Architecture'
-    ],
-    achievements: [
-      'Successfully launched on both Android and iOS platforms as a side project while working full-time as a software engineer.',
-      'Implemented smart task tracking with custom recurrence and completion tracking features.',
-      'Built powerful reminder system with flexible, recurring notifications to ensure timely task completion.',
-      'Designed privacy-focused experience with no ads, no pop-ups, and no data selling for zero interruptions.',
-      'Created premium features including unlimited lists, cloud backups, and beautiful themes via one-time purchase model.',
-      'Developed offline-first architecture with local SQLite database and optional Firebase cloud backups for flexibility.'
-    ],
+      'A science-backed sauna, cold-plunge and contrast-therapy tracker with a research-informed sweat-loss algorithm, live activities and wearable integration. Trademark registered in Australia.',
+    logo: altaflipLogo,
+    year: '2025',
+    tools: ['React Native', 'Expo', 'TypeScript', 'HealthKit', 'Live Activities', 'Firebase'],
     links: [
-      { url: 'https://play.google.com/store/apps/details?id=com.zenzero.tickado', text: 'Android App Store' },
-      { url: 'https://apps.apple.com/us/app/tickmeek/id6743649903', text: 'iOS App Store' }
+      { url: 'https://apps.apple.com/app/id6756031717', text: 'App Store' },
+      { url: 'https://play.google.com/store/apps/details?id=com.jasuplix.altaflip', text: 'Google Play' }
     ]
   },
   {
-    title: 'TAFE NSW',
+    name: 'Dreamlusive',
+    tagline: 'AI dream-analytics journal',
     description:
-      'The TAFE NSW project is an advanced online platform designed to streamline and automate student enrolment, encapsulating a seamless, system-guided workflow for the entire admission process.',
+      'An AI dream-analytics app with voice and text capture, emotion and theme detection and pattern recognition. Ranked among the top results for “dream journal” on Google Play.',
+    logo: dreamlusiveLogo,
+    year: '2025',
+    badge: 'AI',
+    tools: ['React Native', 'Expo', 'TypeScript', 'AI / LLMs', 'Speech-to-Text', 'Firebase'],
+    links: [
+      { url: 'https://apps.apple.com/app/id6753315857', text: 'App Store' },
+      { url: 'https://play.google.com/store/apps/details?id=com.jasuplix.dreamlusive', text: 'Google Play' }
+    ]
+  },
+  {
+    name: 'Tickmeek',
+    tagline: 'Privacy-focused task manager',
+    description:
+      'My first shipped app — a privacy-focused task manager with smart task tracking, flexible recurring reminders and an offline-first architecture. No ads, no pop-ups, no data selling.',
+    logo: tickmeekLogo,
+    year: '2025',
+    tools: ['React Native', 'TypeScript', 'SQLite', 'Firebase', 'Offline-First'],
+    links: [
+      { url: 'https://apps.apple.com/us/app/tickmeek/id6743649903', text: 'App Store' },
+      { url: 'https://play.google.com/store/apps/details?id=com.zenzero.tickado', text: 'Google Play' }
+    ]
+  }
+]
+
+// Self-directed AI engineering & open-source builds.
+export const openSource: OpenSourceProject[] = [
+  {
+    title: 'Local Jarvis',
+    tagline: 'Pure-local AI workspace',
+    description:
+      'Re-architected a cloud-capable browser AI app into a pure-local desktop workspace with no cloud LLM providers, API-key storage or telemetry by default.',
+    year: '2026',
+    tools: ['Tauri', 'Rust', 'Nuxt', 'FastAPI', 'Python', 'Ollama', 'SQLite / FTS5', 'Local Embeddings'],
+    highlights: [
+      'Built a Tauri + Rust shell that bundles and supervises a Nuxt frontend, FastAPI/Python sidecar and Ollama local inference runtime.',
+      'Implemented hardware-tiered model setup, first-run orchestration, model probes, warmup states and memory-pressure fallbacks.',
+      'Added hybrid graph retrieval over a SQLite/FTS5 + local-embeddings store, conversation-replay evals, latency/ingest benchmarks and context compaction.',
+      'Shipped commercial readiness: Ed25519 offline license signing, entitlement gates, third-party notices and notarised macOS release builds.'
+    ],
+    links: [{ url: 'https://github.com/jakubsuplicki', text: 'GitHub' }]
+  },
+  {
+    title: 'AI Protector',
+    tagline: 'AI DLP browser-extension & guardrails platform',
+    description:
+      'Productized an open-source LLM security engine into a browser-extension DLP platform protecting employees using ChatGPT, Claude, Gemini and Copilot — prompts are intercepted and scanned locally before sensitive data leaves the browser.',
+    year: '2026',
+    tools: ['WXT', 'Vue', 'TypeScript', 'Python', 'FastAPI', 'Redis', 'Docker', 'AI Guardrails'],
+    highlights: [
+      'Built the extension foundation with prompt interception, scan-relay flow, and warning/block UI for risky AI-tool usage.',
+      'Added multi-tenant SaaS foundations: tenant/seat models, an activation endpoint, Redis activation cache, scan-auth enforcement and tenancy-correctness tests.',
+      'Produced product strategy via ADRs and research covering Chrome Web Store review, SOC 2 readiness, pricing, infrastructure and go-to-market.'
+    ],
+    links: [{ url: 'https://github.com/jakubsuplicki/ai-protector-web-extension', text: 'GitHub' }]
+  },
+  {
+    title: 'codument',
+    tagline: 'Automated docs for JS/TS projects via Claude Code',
+    description:
+      'An npm dev-dependency that makes documentation an automatic byproduct of development through Claude Code skills, path-scoped rules, hooks and sub-agents.',
+    year: '2026',
+    tools: ['TypeScript', 'Claude Code', 'npm', 'Agentic Workflows', 'MCP'],
+    highlights: [
+      'Designed a registry-driven, sub-agent architecture (doc-writer, doc-scanner, code-reviewer) that scales doc generation and code review to large codebases within context limits.',
+      'Published to npm as a zero-config dev-dependency: `npm install -D codument`.'
+    ],
+    links: [
+      { url: 'https://github.com/jakubsuplicki/codument', text: 'GitHub' },
+      { url: 'https://www.npmjs.com/package/codument', text: 'npm' }
+    ]
+  }
+]
+
+export const projects = [
+  {
+    title: 'TAFE NSW — Student Enrolment Platform',
+    description:
+      'Senior contractor on a large student-enrolment platform, leading delivery of user-facing features and the migration of the legacy system to a modern Nuxt 3 / Vue 3 / TypeScript / Node.js stack.',
     tools: [
-      'Typescript',
-      'Node',
-      'Vue 2',
+      'TypeScript',
       'Vue 3',
-      'Nuxt 2',
       'Nuxt 3',
+      'Node',
       'Pinia',
-      'Vuex',
       'Express',
       'Tailwind',
       'Jest',
@@ -47,113 +115,71 @@ export const projects = [
       'Bitbucket'
     ],
     achievements: [
-      'Spearheaded the launch of a transformative online student enrolment platform, utilising Vue 3 and Nuxt 3 technologies. This achievement was a testament to effective teamwork and agile methodologies, with the successful completion of the project despite stringent deadlines.',
-      'Our breakthrough was met with high praise from all stakeholders and earned consistent positive recognition. My engagement in diverse areas of the organisation bolstered my proficiency in our tech stack and development patterns. Displayed proactive ownership by leading multiple initiatives and fostering innovation in our approaches.'
+      'Spearheaded the launch of a system-guided online enrolment platform on Vue 3 and Nuxt 3, delivered to deadline and consistently praised by stakeholders.',
+      'Migrated and upgraded legacy components into the new environment, applying updated design patterns and best practices.',
+      'Drove software architecture and coding standards across both legacy and new systems, with high automated-test coverage to protect quality and delivery speed.'
     ],
     links: [{ url: 'https://www.tafensw.edu.au/', text: 'TAFE NSW' }]
   },
   {
-    title: 'Navitas - System Migration & Integration',
+    title: 'Navitas — Project Athena (Serverless Integrations)',
     description:
-      'Led a development team through comprehensive legacy system modernisation, driving the migration of critical features to modern cloud frameworks. Mentored team members and delivered complex system integrations while maintaining operational stability throughout the transformation process.',
+      'Technical lead on Project Athena, a serverless integrations platform automating business processes across the organisation. Promoted to Technical Lead within three months of joining.',
     tools: [
-      'System Integration',
-      'Legacy Migration',
-      'Team Leadership',
-      'Technical Implementation',
-      'Architecture Review',
-      'Cloud Frameworks',
-      'Feature Migration',
-      'Hands-on Development'
+      'TypeScript',
+      'Node',
+      'AWS Lambda',
+      'Step Functions',
+      'SNS/SQS',
+      'Serverless',
+      'Hexagonal Architecture',
+      'Monorepo',
+      'Salesforce'
     ],
     achievements: [
-      'Led a development team through multiple feature migrations as part of a larger modernisation initiative across different teams.',
-      'Collaborated with architects and solutions engineers to understand complex system designs, providing technical feedback and implementation insights.',
-      'Mentored team members and provided technical leadership during hands-on implementation of migration work.',
-      'Successfully delivered assigned feature migrations while maintaining system stability and operational continuity.',
-      'Identified timelines and managed delivery risks for team-specific migration roadmaps.',
-      'Independently planned technical work for deeply complex migration tickets within the team scope.',
-      'Identified skill gaps within the team and coached members to fill knowledge gaps effectively.',
-      'Communicated team progress, limitations, and resource needs to stakeholders and defended technical decisions.',
-      'Solved complex technical problems requiring deep understanding of both legacy and modern systems.',
-      'Maintained holistic understanding of business requirements and system architecture to ensure successful feature transitions.'
+      'Led the strategic migration to a serverless, monorepo, hexagonal architecture, significantly improving integration efficiency and scalability.',
+      'Delivered seamless integrations with external services including Salesforce, StudyLink and Navigate via robust, scalable serverless solutions.',
+      'Mentored engineers on serverless and hexagonal architecture; promoted to Technical Lead within three months of joining.',
+      'Planned deeply technical work, coached senior developers in technical leadership, and articulated timelines, risks and trade-offs to stakeholders.'
     ],
     links: [{ url: 'https://www.navitas.com/', text: 'Navitas' }]
   },
   {
-    title: 'The West Australian, Perthnow, 7news',
+    title: 'Seven West Media — News Platform & The Game',
     description:
-      'A monorepo of news websites that serves all 3 mastheads and regional sites plus a range of serverless microservices.',
+      'Cloud-native development across a monorepo serving The West Australian, PerthNow, 7NEWS and regional mastheads, plus internal serverless microservices and The Game, a React-based AFL/cricket tipping platform.',
     tools: [
-      'Typescript',
+      'TypeScript',
       'Node',
       'React',
+      'React Query',
       'Express/Fastify',
       'Emotion',
       'Jest',
-      'VR',
       'PostgreSQL',
+      'DynamoDB',
       'AWS SDK',
       'Pulumi',
       'Nx',
+      'Step Functions',
       'Lambdas',
-      'SNS/SQS',
-      'Websockets',
-      'Sendgrid API'
+      'SNS/SQS'
     ],
     achievements: [
-      'Successfully collaborated with the team and delivered multiple projects with a tight deadline. Regularly received very positive feedback from stakeholders, managers, and the team, including shout-outs of the month.',
-      "Worked in different areas of the organisation and became knowledgeable across the tech stack and company's development patterns. Took ownership and lead multiple initiatives."
+      'Built reusable, sustainable features and microservices, supporting the stability of high-traffic production news systems.',
+      'Delivered features for The Game, a React-based AFL/cricket tipping platform, and dramatically improved scoring efficiency and calculation speed.',
+      'Regularly recognised by stakeholders and management, including monthly shout-outs.'
     ],
     links: [
       { url: 'https://thewest.com.au', text: 'The West' },
-      { url: 'https://perthnow.com.au', text: 'Perthnow' },
-      { url: 'https://7news.com.au', text: '7news' }
+      { url: 'https://perthnow.com.au', text: 'PerthNow' },
+      { url: 'https://7news.com.au', text: '7NEWS' }
     ]
   },
   {
-    title: 'The Game',
-    description: 'React based sports tipping website for AFL and Cricket owned by 7West Media.',
-    tools: {
-      title: 'Tools',
-      stack: [
-        'Typescript',
-        'Node',
-        'React',
-        'ReactQuery',
-        'Express/Fastify',
-        'Emotion',
-        'Jest',
-        'DynamoDB',
-        'AWS SDK',
-        'Pulumi',
-        'Nx',
-        'StepFunctions',
-        'Lambdas',
-        'Chakra',
-        'SNS/SQS'
-      ]
-    },
-    achievements: {
-      title: 'Achievements',
-      content: [
-        'Delivered several features for the tipping platform, and admin portal for the support team and dramatically improved scoring efficiency and calculation speed.'
-      ]
-    },
-    links: {
-      title: 'Link',
-      urls: [
-        {
-          text: 'The Game',
-          href: 'https://thegame.com.au'
-        }
-      ]
-    }
-  },
-  {
-    title: 'iSubbie Web Application',
+    title: 'iSubbie — Job-Bidding Lifecycle PWA',
     description:
-      'An intuitive platform that provides biddable job leads for tradespeople, featuring a strict and system-assisted workflow for the complete lifecycle of a job.',
+      'A job-bidding and lifecycle PWA for tradespeople with payments, chat, notifications and CRM/accounting integrations, featuring a system-assisted workflow for the complete lifecycle of a job.',
     tools: {
       title: 'Tools',
       stack: [
@@ -165,171 +191,71 @@ export const projects = [
         'Express',
         'SCSS',
         'MongoDB',
-        'Mongoose ODM',
+        'Mongoose',
         'MongoDB Atlas',
-        'Git',
         'AWS Beanstalk',
         'AWS S3',
         'Nginx',
-        'RESTful API',
-        'MVC',
         'PWA',
         'Service Workers',
         'Socket.io',
         'JWT',
-        'Passport',
-        'Winston',
-        'Integration with AroFlo API',
-        'Integration with GroupMe API',
-        'Integration with Xero API'
+        'AroFlo API',
+        'GroupMe API',
+        'Xero API'
       ]
     },
     achievements: {
       title: 'Achievements',
       content: [
-        'Received positive feedback from stakeholders on a project that was successfully delivered on time and on budget. Developed a stable application with no critical or high severity issues in production since go-live. Anticipated increase in business revenue and reduction in cost – circa 40%.',
-        'Led the technology strategy and played a key role in the creation of the application. Evaluated and became knowledgeable in new technologies, standards, and trends in web application development.'
+        'Delivered on time and on budget, contributing to ~40% revenue uplift and cost reduction. Developed a stable application with no critical or high severity issues in production since go-live.',
+        'Led the technology strategy and played a key role in the creation of the application, including defining and implementing the CI/CD strategy.'
       ]
     }
   },
   {
-    title: 'Breakdowns app',
+    title: 'Automated Job-Breakdown System',
     description:
-      'An automatic system that connects with the AroFlo CRM system through the API, in order to pre-fetch relevant information and quickly generate job breakdowns.',
+      'An automated system that connects with the AroFlo CRM through its API to pre-fetch relevant information and quickly generate job breakdowns, integrating CRM and accounting via AWS.',
     tools: {
       title: 'Tools',
-      stack: [
-        'Vue.js',
-        'Node.js',
-        'TypeScript',
-        'Express',
-        'SCSS',
-        'Git',
-        'AWS EC2',
-        'AWS S3',
-        'Nginx',
-        'RESTful API',
-        'MVC',
-        'PWA',
-        'Service Workers',
-        'JWT',
-        'Integration with AroFlo API'
-      ]
+      stack: ['Vue.js', 'Node.js', 'TypeScript', 'Express', 'AWS', 'Nginx', 'RESTful API', 'JWT', 'AroFlo API']
     },
     achievements: {
       title: 'Achievements',
       content: [
-        'One person can now generate more than 20 breakdowns per day in comparison to 2-3 breakdowns, which is a 90% increase in productivity.'
+        'One person can now generate more than 20 breakdowns per day compared to 2-3 previously — a ~90% increase in productivity.'
       ]
     }
   },
   {
-    title: 'Bookings app',
+    title: 'Bookings App',
     description:
-      'The purpose of this project was to create an external system that again connects with the AroFlo CRM system through the API in order to be able to complete the bookings without the need of accessing CRM itself, either with admin access or by uniquely generated URL that can be sent to a client in order to complete the booking.',
+      'A Google Places–powered bookings app connecting to the AroFlo CRM through its API, letting bookings be completed without accessing the CRM directly — via admin access or a uniquely generated URL sent to a client.',
     tools: {
       title: 'Tools',
-      stack: [
-        'Vue.js',
-        'Node.js',
-        'TypeScript',
-        'Express',
-        'SCSS',
-        'Git',
-        'AWS',
-        'Nginx',
-        'RESTful API',
-        'MVC',
-        'PWA',
-        'JWT',
-        'Integration with Google APIs',
-        'Integration with AroFlo CRM'
-      ]
+      stack: ['Vue.js', 'Node.js', 'TypeScript', 'Express', 'AWS', 'Nginx', 'RESTful API', 'PWA', 'JWT', 'Google Places API', 'AroFlo API']
     },
     achievements: {
       title: 'Achievements',
       content: [
-        'The speed of making a booking is increased by over 70%, but also allows customers to make their own bookings which saves admin cost and time.'
+        'Increased booking speed by ~70% and cut admin costs by letting customers make their own bookings.'
       ]
     }
   },
   {
-    title: 'Internal APIs service',
+    title: 'Internal APIs Service',
     description:
-      'The idea was to create a dedicated server that consists of internal API endpoints that can be called from within different applications in the company.',
+      'A dedicated server of internal API endpoints callable from across the company’s applications, exposing reusable integrations with AroFlo CRM, GroupMe and Google APIs.',
     tools: {
       title: 'Tools',
-      stack: [
-        'Vue.js',
-        'Node.js',
-        'TypeScript',
-        'Express',
-        'SCSS',
-        'Git',
-        'AWS EC2',
-        'AWS S3',
-        'Nginx',
-        'RESTful API',
-        'MVC',
-        'PWA',
-        'Service Workers',
-        'JWT',
-        'Google Scripts',
-        'API Development',
-        'Server Management',
-        'Integration with AroFlo CRM',
-        'Integration with GroupMe',
-        'Integration with Google APIs'
-      ]
+      stack: ['Node.js', 'TypeScript', 'Express', 'AWS EC2', 'AWS S3', 'Nginx', 'RESTful API', 'JWT', 'Google Scripts', 'AroFlo API', 'GroupMe API', 'Google APIs']
     },
     achievements: {
       title: 'Achievements',
       content: [
-        'Increased the efficiency of developing new applications by exposing secured API endpoints that can be reused across different applications that use similar features such as integration with AroFlo CRM system, GroupMe APIs, Google APIs, etc.'
+        'Increased the efficiency of building new applications by exposing secured, reusable API endpoints for features shared across apps.'
       ]
-    }
-  },
-  {
-    title: 'Online Catalogue',
-    description:
-      'A WooCommerce website consists of products and services provided by the company. The purpose of this project was to convert a paper-based catalogue into an easily accessible, online-based catalogue that allowed for a quick search or to edit / add an item or a service.',
-    tools: {
-      title: 'Tools',
-      stack: ['jQuery', 'PHP', 'WordPress', 'WooCommerce', 'MySQL']
-    },
-    achievements: {
-      title: 'Achievements',
-      content: [
-        'Delivered an online catalogue which saves significant time in finding the correct product and price.'
-      ]
-    }
-  },
-  {
-    title: 'Multiple Customised WordPress Websites',
-    description:
-      'The purpose was to create multiple landing pages in order to gather more leads and ultimately increase the number of clients.',
-    tools: {
-      title: 'Tools',
-      stack: ['jQuery', 'PHP', 'WordPress']
-    },
-    achievements: {
-      title: 'Achievements',
-      content: [
-        'The business expanded by at least 50% due to increased reach and job-specific content on each website.'
-      ]
-    }
-  },
-  {
-    title: 'Automations',
-    description:
-      'Small projects to automate business processes such as automated group chats creation on the job, or being able to generate a chat transcript into PDF format, etc.',
-    tools: {
-      title: 'Tools',
-      stack: ['Node.js', 'Express', 'Google Scripts', 'AroFlo API', 'GroupMe API', 'AWS S3']
-    },
-    achievements: {
-      title: 'Achievements',
-      content: ['Automation helped avoid human errors and ease up many business processes.']
     }
   }
 ]

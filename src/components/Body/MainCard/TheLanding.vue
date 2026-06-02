@@ -29,19 +29,20 @@
         
         <div class="text-lg sm:text-2xl md:text-3xl lg:text-4xl text-slate-600 dark:text-slate-300 font-light leading-relaxed">
           <div class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-2 sm:gap-4">
-            <span class="inline-block">Software Engineer</span>
+            <span class="inline-block">Senior Full-Stack &amp; AI Engineer</span>
             <span class="hidden sm:block w-2 h-2 bg-primary-500 rounded-full"></span>
             <span class="inline-block">Technical Lead</span>
             <span class="hidden sm:block w-2 h-2 bg-primary-500 rounded-full"></span>
-            <span class="inline-block">Founder & Developer</span>
+            <span class="inline-block">App Builder</span>
           </div>
         </div>
       </div>
 
       <!-- Description -->
       <p class="text-base sm:text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-4xl mx-auto leading-relaxed font-light px-4">
-        Passionate about creating innovative solutions with modern technologies. 
-        I build scalable applications that make a difference in people's lives.
+        Agentic AI, local-first systems &amp; AI security. With 7+ years shipping enterprise web applications,
+        I build AI-native products end to end — and I'm focused on making AI useful, private, secure and accountable
+        rather than just impressive in a demo.
       </p>
 
       <!-- Action Buttons -->
@@ -90,7 +91,7 @@ import type { ResumeSelection } from '@/types/resume'
 const resumeStore = useResumeStore()
 
 const techStack = [
-  'Vue.js', 'React', 'React Native', 'TypeScript', 'Node.js', 'Firebase', 'PostgreSQL', 'AWS'
+  'Local LLMs', 'MCP', 'RAG / Retrieval', 'AI Guardrails', 'TypeScript', 'React Native', 'Vue / Nuxt', 'Node.js', 'Python / FastAPI', 'Rust / Tauri', 'AWS'
 ]
 
 const changeSelection = (selection: string) => {
