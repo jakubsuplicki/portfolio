@@ -22,3 +22,24 @@ export type Project = {
   achievements: Achievements
   links?: Link[] | { urls: Link[] }
 }
+
+export type AppProject = {
+  name: string
+  tagline: string
+  description: string
+  logo: string
+  year: string
+  badge?: string
+  tools: string[]
+  links: Link[]
+}
+
+export type OpenSourceProject = {
+  title: string
+  tagline: string
+  description: string
+  year: string
+  tools: string[]
+  highlights: string[]
+  links: Link[]
+}

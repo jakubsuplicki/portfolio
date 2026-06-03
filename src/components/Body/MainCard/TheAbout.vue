@@ -25,15 +25,15 @@
         <div class="space-y-8">
           <div class="space-y-6">
             <p class="text-xl md:text-2xl text-slate-700 dark:text-slate-300 leading-relaxed font-light">
-              Driven by a relentless thirst for knowledge and a knack for self-initiation, I take pride in untangling complex technical knots with my extensive understanding and keen problem-solving skills.
+              Full-stack AI engineer and technical lead with <strong class="text-primary-500">{{ yearsOfExperience }}+ years</strong> shipping enterprise web applications, now building AI-native products end to end.
             </p>
-            
+
             <p class="text-xl md:text-2xl text-slate-700 dark:text-slate-300 leading-relaxed font-light">
-              Professional experience of over <strong class="text-primary-500">{{ yearsOfExperience }} years</strong> in the complete software development life cycle, building applications from scratch and skillfully managing multiple projects across a diverse spectrum of difficulty.
+              I pair a proven delivery track record — promoted to Technical Lead within three months at Navitas, senior contractor for TAFE NSW — with deep, hands-on work in <strong class="text-primary-500">agentic AI</strong>: local-first inference, retrieval systems, AI security and guardrails, and developer tooling that lets humans and AI agents work safely inside real codebases.
             </p>
-            
+
             <p class="text-xl md:text-2xl text-slate-700 dark:text-slate-300 leading-relaxed font-light">
-              I place a strong emphasis on collaboration, engaging with stakeholders across all business tiers, and leveraging our collective insights to bring transformative solutions to intricate business processes and projects.
+              I work comfortably across the full stack and the full lifecycle — React Native, TypeScript, Vue/Nuxt, Node.js, Python/FastAPI, Tauri/Rust, local LLMs, MCP and CI/CD on AWS — and I'm especially focused on making AI useful, private, secure and accountable rather than just impressive in a demo.
             </p>
           </div>
 
@@ -72,12 +72,12 @@
               <div class="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-medium">Years Experience</div>
             </div>
             <div class="space-y-2 sm:space-y-3 p-4 sm:p-6 bg-white/10 dark:bg-slate-800/20 rounded-2xl backdrop-blur-sm border border-white/20 dark:border-slate-700/20">
-              <div class="text-3xl sm:text-4xl font-bold text-primary-500">10+</div>
-              <div class="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-medium">Projects Completed</div>
+              <div class="text-3xl sm:text-4xl font-bold text-primary-500">3</div>
+              <div class="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-medium">Apps Shipped</div>
             </div>
             <div class="space-y-2 sm:space-y-3 p-4 sm:p-6 bg-white/10 dark:bg-slate-800/20 rounded-2xl backdrop-blur-sm border border-white/20 dark:border-slate-700/20">
-              <div class="text-3xl sm:text-4xl font-bold text-primary-500">50+</div>
-              <div class="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-medium">Technologies</div>
+              <div class="text-3xl sm:text-4xl font-bold text-primary-500">AI</div>
+              <div class="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-medium">Native Builder</div>
             </div>
           </div>
         </div>
@@ -88,9 +88,10 @@
         <div class="max-w-4xl mx-auto space-y-8">
           <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">My Philosophy</h2>
           <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-300 leading-relaxed font-light">
-            I believe in creating technology that serves people, not the other way around. 
-            Every line of code should have purpose, every design decision should enhance the user experience, 
-            and every project should make a meaningful impact.
+            AI should be useful, private, secure and accountable — not just impressive in a demo.
+            I build local-first systems that keep users in control of their data, with guardrails and
+            evals baked in, and I care about owning a product end to end: from inference and retrieval
+            to security, licensing and notarised distribution.
           </p>
         </div>
       </div>
@@ -119,19 +120,20 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { ArrowLeft, FileText, Briefcase, Code, Users, Zap, Target } from 'lucide-vue-next'
+import { ArrowLeft, FileText, Briefcase, Code, Users, Cpu, ShieldCheck } from 'lucide-vue-next'
 import { useResumeStore } from '@/store/resumeStore'
 import type { ResumeSelection } from '@/types/resume'
 
 const resumeStore = useResumeStore()
 
-const yearsOfExperience = computed(() => new Date().getFullYear() - 2018)
+// Fixed to match resume framing ("7+ years shipping enterprise web applications").
+const yearsOfExperience = computed(() => 7)
 
 const coreSkills = [
-  { name: 'Full Stack Development', icon: Code },
-  { name: 'Team Leadership', icon: Users },
-  { name: 'Problem Solving', icon: Zap },
-  { name: 'Project Management', icon: Target }
+  { name: 'AI Engineering', icon: Cpu },
+  { name: 'Local-First & Security', icon: ShieldCheck },
+  { name: 'Full-Stack Development', icon: Code },
+  { name: 'Technical Leadership', icon: Users }
 ]
 
 const changeSelection = (selection: string) => {

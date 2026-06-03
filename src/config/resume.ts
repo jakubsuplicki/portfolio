@@ -3,9 +3,23 @@ import englishScoreImage from '@/assets/images/english-min.jpg'
 
 export const resumeSkills = [
   {
+    title: 'AI & Data',
+    icon: ['fas', 'robot'],
+    skills: [
+      'Local LLMs (Ollama)',
+      'MCP',
+      'Retrieval / RAG',
+      'Graph Memory',
+      'Embeddings & Reranking',
+      'Prompt-Injection & Jailbreak Detection',
+      'AI DLP / Guardrails',
+      'Agentic Workflows'
+    ]
+  },
+  {
     title: 'Languages',
     icon: ['fas', 'code'],
-    skills: ['JavaScript', 'CSS3', 'HTML5', 'TypeScript', 'Python', 'PHP', 'YAML', 'SQL']
+    skills: ['TypeScript', 'JavaScript', 'Python', 'Rust', 'PHP', 'HTML5', 'CSS3', 'SQL', 'YAML']
   },
   {
     title: 'Frontend',
@@ -34,15 +48,18 @@ export const resumeSkills = [
       'Node.js',
       'Express',
       'Fastify',
+      'Python / FastAPI',
+      'Rust / Tauri',
+      'SST',
       'Pulumi',
+      'Docker',
       'Nginx',
       'GraphQL',
       'RESTful API',
-      'Ajax',
-      'Axios',
+      'Kafka / Confluent',
       'AWS SDK',
       'Firebase',
-      'AWS (EC2, Elastic Beanstalk, S3, CloudWatch, Lambda, SNS/SQS, StepFunctions, IAM, Route53)'
+      'AWS (Lambda, S3, EC2, Step Functions, SNS/SQS, X-Ray, IAM, Route53)'
     ]
   },
   {
@@ -111,14 +128,20 @@ export const resumeSkills = [
 ]
 export const professionalExperience = [
   {
-    title: 'Senior Full Stack Developer (Contract)',
+    title: 'Senior Full-Stack & AI Engineer',
+    location: 'Independent / Open-Source AI',
+    date: '2026 - Present',
+    icon: ['fas', 'robot']
+  },
+  {
+    title: 'Senior Full-Stack Developer (Contract)',
     location: 'TAFE NSW',
     date: 'August 2024 - Present',
     icon: ['fas', 'keyboard']
   },
   {
-    title: 'Founder',
-    location: 'Zen Zero Pty Ltd',
+    title: 'Founder & App Developer',
+    location: 'Independent',
     date: 'May 2025 - Present',
     icon: ['fas', 'rocket']
   },
