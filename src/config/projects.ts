@@ -66,28 +66,50 @@ export const openSource: OpenSourceProject[] = [
   },
   {
     title: 'AI Protector',
-    tagline: 'AI DLP browser-extension & guardrails platform',
+    tagline: 'Self-hosted AI prompt-DLP browser extension',
     description:
-      'Productized an open-source LLM security engine into a browser-extension DLP platform protecting employees using ChatGPT, Claude, Gemini and Copilot — prompts are intercepted and scanned locally before sensitive data leaves the browser.',
+      'Forked and adapted an open-source LLM security engine into a self-hosted browser DLP workflow: a Chromium extension intercepts ChatGPT and Claude prompts, scans them locally for PII, secrets and policy risks, then blocks or warns before sensitive data leaves the browser.',
     year: '2026',
-    tools: ['WXT', 'Vue', 'TypeScript', 'Python', 'FastAPI', 'Redis', 'Docker', 'AI Guardrails'],
+    tools: [
+      'WXT',
+      'TypeScript',
+      'Bun',
+      'Chromium MV3',
+      'Python',
+      'FastAPI',
+      'Presidio',
+      'Docker Compose',
+      'PostgreSQL',
+      'Redis'
+    ],
     highlights: [
-      'Built the extension foundation with prompt interception, scan-relay flow, and warning/block UI for risky AI-tool usage.',
-      'Added multi-tenant SaaS foundations: tenant/seat models, an activation endpoint, Redis activation cache, scan-auth enforcement and tenancy-correctness tests.',
-      'Produced product strategy via ADRs and research covering Chrome Web Store review, SOC 2 readiness, pricing, infrastructure and go-to-market.'
+      'Refactored the upstream engine for local scan-only protection: FastAPI /v1/scan endpoint, Docker Compose services, PostgreSQL-backed policies/request logs and Redis policy cache.',
+      'Built the WXT/TypeScript Chromium MV3 extension for ChatGPT and Claude: MAIN-world fetch interception, service-worker relay to /v1/scan, browser-storage settings and toolbar health checks.',
+      'Implemented the prompt-risk UX: Strict/Ask/Observe modes, policy/site/engine-URL controls, Presidio-backed PII detection, masked Shadow DOM warnings and Bun test coverage for relay, risk and warning flows.'
     ],
     links: [{ url: 'https://github.com/jakubsuplicki/ai-protector-web-extension', text: 'GitHub' }]
   },
   {
     title: 'codument',
-    tagline: 'Automated docs for JS/TS projects via Claude Code',
+    tagline: 'Docs-backed workflow for AI coding agents',
     description:
-      'An npm dev-dependency that makes documentation an automatic byproduct of development through Claude Code skills, path-scoped rules, hooks and sub-agents.',
+      'An npm dev-dependency that installs an agent-neutral delivery workflow for Codex, Claude Code and future coding agents: shared instructions, portable workflow skills, source-to-doc registry, docs scaffolding, profile updates and proof benchmarks.',
     year: '2026',
-    tools: ['TypeScript', 'Claude Code', 'npm', 'Agentic Workflows', 'MCP'],
+    tools: [
+      'TypeScript',
+      'Node.js',
+      'Commander',
+      'npm',
+      'Codex',
+      'Claude Code',
+      'Agentic Workflows',
+      'Docs Registry',
+      'Benchmarks'
+    ],
     highlights: [
-      'Designed a registry-driven, sub-agent architecture (doc-writer, doc-scanner, code-reviewer) that scales doc generation and code review to large codebases within context limits.',
-      'Published to npm as a zero-config dev-dependency: `npm install -D codument`.'
+      'Designed and built the core cross-agent delivery loop: grill requests against docs, plan durable work, approve scope, implement, verify, document, review, commit and repeat.',
+      'Built profile-aware CLI commands for init, scan, adopt and update, installing Codex/generic assets (`AGENTS.md`, `.agents/skills`) and Claude-specific skills, rules, hooks and subagents when selected.',
+      'Added deterministic proof benchmarks for registry-guided context routing and quality scoring, including fixture setup, final-state checks, docs updates, registry coverage and source-boundary validation.'
     ],
     links: [
       { url: 'https://github.com/jakubsuplicki/codument', text: 'GitHub' },
