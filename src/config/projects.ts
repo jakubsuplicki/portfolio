@@ -93,6 +93,20 @@ export const openSource: OpenSourceProject[] = [
       { url: 'https://github.com/jakubsuplicki/codument', text: 'GitHub' },
       { url: 'https://www.npmjs.com/package/codument', text: 'npm' }
     ]
+  },
+  {
+    title: 'Huelooks',
+    tagline: 'AI color-analysis backend for fashion',
+    description:
+      'A computer-vision pipeline that extracts individual garments from product photos, classifies them, analyses their dominant colours and matches them to a 12-season colour-analysis system for personalised recommendations.',
+    year: '2025',
+    tools: ['Python', 'FastAPI', 'Grounding DINO', 'SAM 2.1', 'DeepSeek', 'Google Vision', 'PostgreSQL / Supabase', 'CIELAB'],
+    highlights: [
+      'Built an automated ingest pipeline that detects and segments clothing from affiliate product feeds using Grounding DINO + SAM 2.1, with transparent-background garment extraction.',
+      'Implemented a 12-season professional colour-analysis system with HSV/CIELAB colour-space matching to map products to personalised palettes.',
+      'Added batch processing with GPU acceleration and stored ranked recommendations in PostgreSQL/Supabase.'
+    ],
+    links: [{ url: 'https://github.com/jakubsuplicki/huelooks', text: 'GitHub' }]
   }
 ]
 
