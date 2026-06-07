@@ -14,6 +14,7 @@ export const apps: AppProject[] = [
     year: '2025',
     tools: ['React Native', 'Expo', 'TypeScript', 'HealthKit', 'Live Activities', 'Firebase'],
     links: [
+      { url: 'https://altaflip.com', text: 'Website' },
       { url: 'https://apps.apple.com/app/id6756031717', text: 'App Store' },
       { url: 'https://play.google.com/store/apps/details?id=com.jasuplix.altaflip', text: 'Google Play' }
     ]
@@ -28,6 +29,7 @@ export const apps: AppProject[] = [
     badge: 'AI',
     tools: ['React Native', 'Expo', 'TypeScript', 'AI / LLMs', 'Speech-to-Text', 'Firebase'],
     links: [
+      { url: 'https://dreamlusive.com', text: 'Website' },
       { url: 'https://apps.apple.com/app/id6753315857', text: 'App Store' },
       { url: 'https://play.google.com/store/apps/details?id=com.jasuplix.dreamlusive', text: 'Google Play' }
     ]
@@ -41,6 +43,7 @@ export const apps: AppProject[] = [
     year: '2025',
     tools: ['React Native', 'TypeScript', 'SQLite', 'Firebase', 'Offline-First'],
     links: [
+      { url: 'https://tickmeek.com', text: 'Website' },
       { url: 'https://apps.apple.com/us/app/tickmeek/id6743649903', text: 'App Store' },
       { url: 'https://play.google.com/store/apps/details?id=com.zenzero.tickado', text: 'Google Play' }
     ]
@@ -53,7 +56,7 @@ export const openSource: OpenSourceProject[] = [
     title: 'Local Jarvis',
     tagline: 'Pure-local AI workspace',
     description:
-      'Re-architected a cloud-capable browser AI app into a pure-local desktop workspace with no cloud LLM providers, API-key storage or telemetry by default.',
+      'Re-architected a cloud-capable browser AI app into a pure-local desktop workspace with no cloud LLM providers, API-key storage or telemetry by default. Started as a public collaboration with a friend, then evolved into a private product repo while the public release link is pending.',
     year: '2026',
     tools: ['Tauri', 'Rust', 'Nuxt', 'FastAPI', 'Python', 'Ollama', 'SQLite / FTS5', 'Local Embeddings'],
     highlights: [
@@ -62,7 +65,7 @@ export const openSource: OpenSourceProject[] = [
       'Added hybrid graph retrieval over a SQLite/FTS5 + local-embeddings store, conversation-replay evals, latency/ingest benchmarks and context compaction.',
       'Shipped commercial readiness: Ed25519 offline license signing, entitlement gates, third-party notices and notarised macOS release builds.'
     ],
-    links: [{ url: 'https://github.com/jakubsuplicki', text: 'GitHub' }]
+    links: [{ url: 'https://github.com/Szesnasty/Jarvis', text: 'Szesnasty/Jarvis' }]
   },
   {
     title: 'AI Protector',
@@ -87,7 +90,12 @@ export const openSource: OpenSourceProject[] = [
       'Built the WXT/TypeScript Chromium MV3 extension for ChatGPT and Claude: MAIN-world fetch interception, service-worker relay to /v1/scan, browser-storage settings and toolbar health checks.',
       'Implemented the prompt-risk UX: Strict/Ask/Observe modes, policy/site/engine-URL controls, Presidio-backed PII detection, masked Shadow DOM warnings and Bun test coverage for relay, risk and warning flows.'
     ],
-    links: [{ url: 'https://github.com/jakubsuplicki/ai-protector-web-extension', text: 'GitHub' }]
+    links: [
+      {
+        url: 'https://github.com/jakubsuplicki/ai-protector-web-extension',
+        text: 'jakubsuplicki/ai-protector-web-extension'
+      }
+    ]
   },
   {
     title: 'codument',
@@ -112,7 +120,7 @@ export const openSource: OpenSourceProject[] = [
       'Added deterministic proof benchmarks for registry-guided context routing and quality scoring, including fixture setup, final-state checks, docs updates, registry coverage and source-boundary validation.'
     ],
     links: [
-      { url: 'https://github.com/jakubsuplicki/codument', text: 'GitHub' },
+      { url: 'https://github.com/jakubsuplicki/codument', text: 'jakubsuplicki/codument' },
       { url: 'https://www.npmjs.com/package/codument', text: 'npm' }
     ]
   },
@@ -128,7 +136,7 @@ export const openSource: OpenSourceProject[] = [
       'Implemented a 12-season professional colour-analysis system with HSV/CIELAB colour-space matching to map products to personalised palettes.',
       'Added batch processing with GPU acceleration and stored ranked recommendations in PostgreSQL/Supabase.'
     ],
-    links: [{ url: 'https://github.com/jakubsuplicki/huelooks', text: 'GitHub' }]
+    links: [{ url: 'https://github.com/jakubsuplicki/huelooks', text: 'jakubsuplicki/huelooks' }]
   }
 ]
 
