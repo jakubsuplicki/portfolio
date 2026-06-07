@@ -75,10 +75,39 @@
                 :href="link.url"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center space-x-2 px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-xl transition-all duration-200 text-sm font-medium hover:scale-105 shadow-md"
+                :aria-label="`${app.name} ${link.text}`"
+                :title="`${app.name} ${link.text}`"
+                class="inline-flex items-center justify-center rounded-xl transition-all duration-200 text-sm font-medium hover:scale-105 shadow-md"
+                :class="isIconOnlyAppLink(link.text)
+                  ? 'w-10 h-10 bg-slate-900 hover:bg-slate-800 text-white dark:bg-white dark:hover:bg-slate-200 dark:text-slate-900'
+                  : 'space-x-2 px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white'"
               >
-                <ExternalLink class="w-4 h-4 flex-shrink-0" />
-                <span>{{ link.text }}</span>
+                <svg
+                  v-if="link.text === 'App Store'"
+                  class="h-5 w-4 flex-shrink-0"
+                  viewBox="0 0 384 512"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"
+                  />
+                </svg>
+                <svg
+                  v-else-if="link.text === 'Google Play'"
+                  class="h-5 w-5 flex-shrink-0"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44-3.83 0-6.92-3.09-6.92-6.92s3.09-6.92 6.92-6.92c1.84 0 3.5.7 4.76 1.84l2.1-2.1c-1.86-1.74-4.31-2.81-6.86-2.81-5.26 0-9.5 4.25-9.5 9.5s4.24 9.5 9.5 9.5c5.41 0 9.45-3.86 9.45-9.3 0-.36-.11-.66-.29-.96Z"
+                  />
+                </svg>
+                <component v-else :is="getAppLinkIcon(link.text)" class="w-4 h-4 flex-shrink-0" />
+                <span v-if="!isIconOnlyAppLink(link.text)">{{ link.text }}</span>
               </a>
             </div>
           </div>
@@ -122,10 +151,12 @@
                   :href="link.url"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="inline-flex items-center space-x-2 px-5 py-2.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-xl transition-all duration-200 text-sm font-medium hover:scale-105 shadow-md"
+                  :aria-label="`${project.title} ${link.text}`"
+                  :title="`${project.title} ${link.text}`"
+                  class="inline-flex max-w-full min-w-0 items-center space-x-2 px-5 py-2.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-xl transition-all duration-200 text-sm font-medium hover:scale-105 shadow-md"
                 >
                   <component :is="link.text === 'npm' ? Package : Github" class="w-4 h-4 flex-shrink-0" />
-                  <span>{{ link.text }}</span>
+                  <span class="truncate">{{ link.text }}</span>
                 </a>
               </div>
             </div>
@@ -292,7 +323,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { ExternalLink, Briefcase, Code, Award, CheckCircle, ArrowLeft, Smartphone, Cpu, Github, Package } from 'lucide-vue-next'
+import { ExternalLink, Briefcase, Code, Award, CheckCircle, ArrowLeft, Smartphone, Cpu, Github, Package, Globe } from 'lucide-vue-next'
 import { projects, apps, openSource } from '@/config/projects'
 import { useResumeStore } from '@/store/resumeStore'
 import type { ResumeSelection } from '@/types/resume'
@@ -303,6 +334,17 @@ const resumeStore = useResumeStore()
 
 const changeSelection = (selection: string) => {
   resumeStore.changeSelection(selection as ResumeSelection)
+}
+
+const isIconOnlyAppLink = (text: string): boolean => {
+  return text === 'App Store' || text === 'Google Play'
+}
+
+const getAppLinkIcon = (text: string) => {
+  if (text === 'Website') {
+    return Globe
+  }
+  return ExternalLink
 }
 
 const getProjectTools = (project: any): string[] => {
