@@ -53,19 +53,31 @@ export const apps: AppProject[] = [
 // Self-directed AI engineering & open-source builds.
 export const openSource: OpenSourceProject[] = [
   {
-    title: 'Local Jarvis',
-    tagline: 'Pure-local AI workspace',
+    title: 'Codument',
+    tagline: 'Docs-backed workflow for AI coding agents',
     description:
-      'Re-architected a cloud-capable browser AI app into a pure-local desktop workspace with no cloud LLM providers, API-key storage or telemetry by default. Started as a public collaboration with a friend, then evolved into a private product repo while the public release link is pending.',
+      'An npm dev-dependency that installs an agent-neutral delivery workflow for Codex, Claude Code and future coding agents: shared instructions, portable workflow skills, source-to-doc registry, docs scaffolding, profile updates and proof benchmarks.',
     year: '2026',
-    tools: ['Tauri', 'Rust', 'Nuxt', 'FastAPI', 'Python', 'Ollama', 'SQLite / FTS5', 'Local Embeddings'],
-    highlights: [
-      'Built a Tauri + Rust shell that bundles and supervises a Nuxt frontend, FastAPI/Python sidecar and Ollama local inference runtime.',
-      'Implemented hardware-tiered model setup, first-run orchestration, model probes, warmup states and memory-pressure fallbacks.',
-      'Added hybrid graph retrieval over a SQLite/FTS5 + local-embeddings store, conversation-replay evals, latency/ingest benchmarks and context compaction.',
-      'Shipped commercial readiness: Ed25519 offline license signing, entitlement gates, third-party notices and notarised macOS release builds.'
+    tools: [
+      'TypeScript',
+      'Node.js',
+      'Commander',
+      'npm',
+      'Codex',
+      'Claude Code',
+      'Agentic Workflows',
+      'Docs Registry',
+      'Benchmarks'
     ],
-    links: [{ url: 'https://github.com/Szesnasty/Jarvis', text: 'Szesnasty/Jarvis' }]
+    highlights: [
+      'Designed and built the core cross-agent delivery loop: grill requests against docs, plan durable work, approve scope, implement, verify, document, review, commit and repeat.',
+      'Built profile-aware CLI commands for init, scan, adopt and update, installing Codex/generic assets (`AGENTS.md`, `.agents/skills`) and Claude-specific skills, rules, hooks and subagents when selected.',
+      'Added deterministic proof benchmarks for registry-guided context routing and quality scoring, including fixture setup, final-state checks, docs updates, registry coverage and source-boundary validation.'
+    ],
+    links: [
+      { url: 'https://github.com/jakubsuplicki/codument', text: 'jakubsuplicki/codument' },
+      { url: 'https://www.npmjs.com/package/codument', text: 'npm' }
+    ]
   },
   {
     title: 'AI Protector',
@@ -98,31 +110,19 @@ export const openSource: OpenSourceProject[] = [
     ]
   },
   {
-    title: 'codument',
-    tagline: 'Docs-backed workflow for AI coding agents',
+    title: 'Local Jarvis',
+    tagline: 'Pure-local AI workspace',
     description:
-      'An npm dev-dependency that installs an agent-neutral delivery workflow for Codex, Claude Code and future coding agents: shared instructions, portable workflow skills, source-to-doc registry, docs scaffolding, profile updates and proof benchmarks.',
+      'Re-architected a cloud-capable browser AI app into a pure-local desktop workspace with no cloud LLM providers, API-key storage or telemetry by default. Started as a public collaboration with a friend, then evolved into a private product repo while the public release link is pending.',
     year: '2026',
-    tools: [
-      'TypeScript',
-      'Node.js',
-      'Commander',
-      'npm',
-      'Codex',
-      'Claude Code',
-      'Agentic Workflows',
-      'Docs Registry',
-      'Benchmarks'
-    ],
+    tools: ['Tauri', 'Rust', 'Nuxt', 'FastAPI', 'Python', 'Ollama', 'SQLite / FTS5', 'Local Embeddings'],
     highlights: [
-      'Designed and built the core cross-agent delivery loop: grill requests against docs, plan durable work, approve scope, implement, verify, document, review, commit and repeat.',
-      'Built profile-aware CLI commands for init, scan, adopt and update, installing Codex/generic assets (`AGENTS.md`, `.agents/skills`) and Claude-specific skills, rules, hooks and subagents when selected.',
-      'Added deterministic proof benchmarks for registry-guided context routing and quality scoring, including fixture setup, final-state checks, docs updates, registry coverage and source-boundary validation.'
+      'Built a Tauri + Rust shell that bundles and supervises a Nuxt frontend, FastAPI/Python sidecar and Ollama local inference runtime.',
+      'Implemented hardware-tiered model setup, first-run orchestration, model probes, warmup states and memory-pressure fallbacks.',
+      'Added hybrid graph retrieval over a SQLite/FTS5 + local-embeddings store, conversation-replay evals, latency/ingest benchmarks and context compaction.',
+      'Shipped commercial readiness: Ed25519 offline license signing, entitlement gates, third-party notices and notarised macOS release builds.'
     ],
-    links: [
-      { url: 'https://github.com/jakubsuplicki/codument', text: 'jakubsuplicki/codument' },
-      { url: 'https://www.npmjs.com/package/codument', text: 'npm' }
-    ]
+    links: [{ url: 'https://github.com/Szesnasty/Jarvis', text: 'Szesnasty/Jarvis' }]
   },
   {
     title: 'Huelooks',
