@@ -110,19 +110,31 @@ export const openSource: OpenSourceProject[] = [
     ]
   },
   {
-    title: 'Local Jarvis',
-    tagline: 'Pure-local AI workspace',
+    title: 'DeepBind',
+    tagline: 'Pure-local AI knowledge & memory workspace',
     description:
-      'Re-architected a cloud-capable browser AI app into a pure-local desktop workspace with no cloud LLM providers, API-key storage or telemetry by default. Started as a public collaboration with a friend, then evolved into a private product repo while the public release link is pending.',
+      'A local-first personal knowledge, planning and memory system that runs entirely on your machine — no cloud LLM providers, API-key storage or telemetry. It retrieves from local Markdown notes and documents, reasons with a bundled local model and writes useful outputs back into durable memory. Released open-source under MIT; builds on the original Jarvis by Łukasz Jakubowski.',
     year: '2026',
-    tools: ['Tauri', 'Rust', 'Nuxt', 'FastAPI', 'Python', 'Ollama', 'SQLite / FTS5', 'Local Embeddings'],
-    highlights: [
-      'Built a Tauri + Rust shell that bundles and supervises a Nuxt frontend, FastAPI/Python sidecar and Ollama local inference runtime.',
-      'Implemented hardware-tiered model setup, first-run orchestration, model probes, warmup states and memory-pressure fallbacks.',
-      'Added hybrid graph retrieval over a SQLite/FTS5 + local-embeddings store, conversation-replay evals, latency/ingest benchmarks and context compaction.',
-      'Shipped commercial readiness: Ed25519 offline license signing, entitlement gates, third-party notices and notarised macOS release builds.'
+    tools: [
+      'Tauri',
+      'Rust',
+      'Nuxt 4',
+      'Vue',
+      'FastAPI',
+      'Python',
+      'Ollama',
+      'SQLite / FTS5',
+      'Local Embeddings',
+      'MCP',
+      'Knowledge Graph'
     ],
-    links: [{ url: 'https://github.com/Szesnasty/Jarvis', text: 'Szesnasty/Jarvis' }]
+    highlights: [
+      'Built a Tauri + Rust shell that bundles and supervises a Nuxt 4 frontend, FastAPI/Python sidecar and Ollama local inference runtime.',
+      'Implemented hybrid retrieval over a SQLite/FTS5 + local-embeddings store: BM25, embeddings, reranking and knowledge-graph expansion with document section splitting, context compaction and replay evals.',
+      'Added durable memory write-back to Markdown notes, plans and sessions, plus an MCP server exposing the same local memory to Claude Desktop, Cursor, VS Code Copilot and Continue.',
+      'Shipped desktop release engineering: hardware-tiered model setup, first-run orchestration, an Ed25519 offline-licensing reference implementation and notarised macOS builds.'
+    ],
+    links: [{ url: 'https://github.com/jakubsuplicki/deepbind', text: 'jakubsuplicki/deepbind' }]
   },
   {
     title: 'Huelooks',
