@@ -50,19 +50,31 @@ export const apps: AppProject[] = [
 // Self-directed AI engineering & open-source builds.
 export const openSource: OpenSourceProject[] = [
   {
-    title: 'Local Jarvis',
-    tagline: 'Pure-local AI workspace',
+    title: 'Codument',
+    tagline: 'Docs-backed workflow for AI coding agents',
     description:
-      'Re-architected a cloud-capable browser AI app into a pure-local desktop workspace with no cloud LLM providers, API-key storage or telemetry by default.',
+      'An npm dev-dependency that installs an agent-neutral delivery workflow for Codex, Claude Code and future coding agents: shared instructions, portable workflow skills, source-to-doc registry, docs scaffolding, profile updates and proof benchmarks.',
     year: '2026',
-    tools: ['Tauri', 'Rust', 'Nuxt', 'FastAPI', 'Python', 'Ollama', 'SQLite / FTS5', 'Local Embeddings'],
-    highlights: [
-      'Built a Tauri + Rust shell that bundles and supervises a Nuxt frontend, FastAPI/Python sidecar and Ollama local inference runtime.',
-      'Implemented hardware-tiered model setup, first-run orchestration, model probes, warmup states and memory-pressure fallbacks.',
-      'Added hybrid graph retrieval over a SQLite/FTS5 + local-embeddings store, conversation-replay evals, latency/ingest benchmarks and context compaction.',
-      'Shipped commercial readiness: Ed25519 offline license signing, entitlement gates, third-party notices and notarised macOS release builds.'
+    tools: [
+      'TypeScript',
+      'Node.js',
+      'Commander',
+      'npm',
+      'Codex',
+      'Claude Code',
+      'Agentic Workflows',
+      'Docs Registry',
+      'Benchmarks'
     ],
-    links: [{ url: 'https://github.com/jakubsuplicki', text: 'GitHub' }]
+    highlights: [
+      'Designed and built the core cross-agent delivery loop: grill requests against docs, plan durable work, approve scope, implement, verify, document, review, commit and repeat.',
+      'Built profile-aware CLI commands for init, scan, adopt and update, installing Codex/generic assets (`AGENTS.md`, `.agents/skills`) and Claude-specific skills, rules, hooks and subagents when selected.',
+      'Added deterministic proof benchmarks for registry-guided context routing and quality scoring, including fixture setup, final-state checks, docs updates, registry coverage and source-boundary validation.'
+    ],
+    links: [
+      { url: 'https://github.com/jakubsuplicki/codument', text: 'jakubsuplicki/codument' },
+      { url: 'https://www.npmjs.com/package/codument', text: 'npm' }
+    ]
   },
   {
     title: 'AI Protector',
@@ -79,20 +91,31 @@ export const openSource: OpenSourceProject[] = [
     links: [{ url: 'https://github.com/jakubsuplicki/ai-protector-web-extension', text: 'GitHub' }]
   },
   {
-    title: 'codument',
-    tagline: 'Automated docs for JS/TS projects via Claude Code',
+    title: 'DeepBind',
+    tagline: 'Pure-local AI knowledge & memory workspace',
     description:
-      'An npm dev-dependency that makes documentation an automatic byproduct of development through Claude Code skills, path-scoped rules, hooks and sub-agents.',
+      'A local-first personal knowledge, planning and memory system that runs entirely on your machine — no cloud LLM providers, API-key storage or telemetry. It retrieves from local Markdown notes and documents, reasons with a bundled local model and writes useful outputs back into durable memory. Released open-source under MIT; builds on the original Jarvis by Łukasz Jakubowski.',
     year: '2026',
-    tools: ['TypeScript', 'Claude Code', 'npm', 'Agentic Workflows', 'MCP'],
-    highlights: [
-      'Designed a registry-driven, sub-agent architecture (doc-writer, doc-scanner, code-reviewer) that scales doc generation and code review to large codebases within context limits.',
-      'Published to npm as a zero-config dev-dependency: `npm install -D codument`.'
+    tools: [
+      'Tauri',
+      'Rust',
+      'Nuxt 4',
+      'Vue',
+      'FastAPI',
+      'Python',
+      'Ollama',
+      'SQLite / FTS5',
+      'Local Embeddings',
+      'MCP',
+      'Knowledge Graph'
     ],
-    links: [
-      { url: 'https://github.com/jakubsuplicki/codument', text: 'GitHub' },
-      { url: 'https://www.npmjs.com/package/codument', text: 'npm' }
-    ]
+    highlights: [
+      'Built a Tauri + Rust shell that bundles and supervises a Nuxt 4 frontend, FastAPI/Python sidecar and Ollama local inference runtime.',
+      'Implemented hybrid retrieval over a SQLite/FTS5 + local-embeddings store: BM25, embeddings, reranking and knowledge-graph expansion with document section splitting, context compaction and replay evals.',
+      'Added durable memory write-back to Markdown notes, plans and sessions, plus an MCP server exposing the same local memory to Claude Desktop, Cursor, VS Code Copilot and Continue.',
+      'Shipped desktop release engineering: hardware-tiered model setup, first-run orchestration, an Ed25519 offline-licensing reference implementation and notarised macOS builds.'
+    ],
+    links: [{ url: 'https://github.com/jakubsuplicki/deepbind', text: 'jakubsuplicki/deepbind' }]
   },
   {
     title: 'Huelooks',
