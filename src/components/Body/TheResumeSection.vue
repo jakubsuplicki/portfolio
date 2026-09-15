@@ -2,11 +2,7 @@
   <div class="space-y-4 sm:space-y-6">
     <!-- Items -->
     <div class="space-y-4 sm:space-y-6">
-      <div
-        v-for="(item, index) in items"
-        :key="index"
-        class="relative"
-      >
+      <div v-for="(item, index) in items" :key="index" class="relative">
         <!-- Timeline Line -->
         <div
           v-if="index < items.length - 1"
@@ -17,7 +13,9 @@
         <TheResumeItem :item="item">
           <template v-if="item.skills" #skills>
             <div class="space-y-2 sm:space-y-3">
-              <h4 class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wide">
+              <h4
+                class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wide"
+              >
                 Key Technologies
               </h4>
               <div class="flex flex-wrap gap-1.5 sm:gap-2">
@@ -46,6 +44,7 @@ interface ResumeItem {
   date?: string
   icon?: string[] | string
   skills?: string[]
+  details?: string[]
 }
 
 defineProps<{

@@ -10,12 +10,12 @@
           <ArrowLeft class="w-5 h-5" />
           <span>Back to Home</span>
         </button>
-        
+
         <h1 class="text-5xl md:text-7xl font-bold mb-6">
           <span class="text-gradient">About Me</span>
         </h1>
         <p class="text-2xl md:text-3xl text-slate-600 dark:text-slate-300 font-light">
-          {{ yearsOfExperience }}+ years of crafting digital experiences
+          Enterprise software delivery since 2018
         </p>
       </div>
 
@@ -24,22 +24,36 @@
         <!-- Text Content -->
         <div class="space-y-8">
           <div class="space-y-6">
-            <p class="text-xl md:text-2xl text-slate-700 dark:text-slate-300 leading-relaxed font-light">
-              Full-stack AI engineer and technical lead with <strong class="text-primary-500">{{ yearsOfExperience }}+ years</strong> shipping enterprise web applications, now building AI-native products end to end.
+            <p
+              class="text-xl md:text-2xl text-slate-700 dark:text-slate-300 leading-relaxed font-light"
+            >
+              Senior full-stack engineer and technical lead delivering enterprise web platforms,
+              serverless integrations and independently shipped products.
             </p>
 
-            <p class="text-xl md:text-2xl text-slate-700 dark:text-slate-300 leading-relaxed font-light">
-              I pair a proven delivery track record — promoted to Technical Lead within three months at Navitas, senior contractor for TAFE NSW — with deep, hands-on work in <strong class="text-primary-500">agentic AI</strong>: local-first inference, retrieval systems, AI security and guardrails, and developer tooling that lets humans and AI agents work safely inside real codebases.
+            <p
+              class="text-xl md:text-2xl text-slate-700 dark:text-slate-300 leading-relaxed font-light"
+            >
+              I pair a proven delivery track record — including technical leadership at Navitas and
+              senior delivery at TAFE NSW — with hands-on work in
+              <strong class="text-primary-500">applied AI</strong>: local-first inference, hybrid
+              retrieval, knowledge graphs, AI security and developer tooling.
             </p>
 
-            <p class="text-xl md:text-2xl text-slate-700 dark:text-slate-300 leading-relaxed font-light">
-              I work comfortably across the full stack and the full lifecycle — React Native, TypeScript, Vue/Nuxt, Node.js, Python/FastAPI, Tauri/Rust, local LLMs, MCP and CI/CD on AWS — and I'm especially focused on making AI useful, private, secure and accountable rather than just impressive in a demo.
+            <p
+              class="text-xl md:text-2xl text-slate-700 dark:text-slate-300 leading-relaxed font-light"
+            >
+              I work across the full stack and product lifecycle — from architecture and
+              implementation through testing and release — using React Native, TypeScript, Vue/Nuxt,
+              Node.js, Python/FastAPI, Tauri/Rust, local LLMs, MCP and AWS.
             </p>
           </div>
 
           <!-- Core Strengths -->
           <div class="space-y-6">
-            <h3 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">Core Strengths</h3>
+            <h3 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
+              Core Strengths
+            </h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div
                 v-for="skill in coreSkills"
@@ -47,7 +61,9 @@
                 class="flex items-center space-x-4 p-6 bg-white/10 dark:bg-slate-800/20 rounded-2xl backdrop-blur-sm border border-white/20 dark:border-slate-700/20 hover:bg-white/20 dark:hover:bg-slate-800/30 hover:scale-105 transition-all duration-300"
               >
                 <component :is="skill.icon" class="w-8 h-8 text-primary-500 flex-shrink-0" />
-                <span class="font-medium text-lg text-slate-700 dark:text-slate-300">{{ skill.name }}</span>
+                <span class="font-medium text-lg text-slate-700 dark:text-slate-300">{{
+                  skill.name
+                }}</span>
               </div>
             </div>
           </div>
@@ -57,7 +73,9 @@
         <div class="space-y-8">
           <!-- Profile Image -->
           <div class="relative mx-auto w-80 h-80 lg:w-96 lg:h-96">
-            <div class="absolute inset-0 bg-gradient-to-br from-primary-500 to-accent-500 rounded-3xl rotate-6 opacity-20"></div>
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-primary-500 to-accent-500 rounded-3xl rotate-6 opacity-20"
+            ></div>
             <img
               src="/src/assets/images/profile_pic.jpeg"
               alt="Profile Picture"
@@ -67,17 +85,31 @@
 
           <!-- Stats Grid -->
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
-            <div class="space-y-2 sm:space-y-3 p-4 sm:p-6 bg-white/10 dark:bg-slate-800/20 rounded-2xl backdrop-blur-sm border border-white/20 dark:border-slate-700/20">
-              <div class="text-3xl sm:text-4xl font-bold text-primary-500">{{ yearsOfExperience }}+</div>
-              <div class="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-medium">Years Experience</div>
+            <div
+              class="space-y-2 sm:space-y-3 p-4 sm:p-6 bg-white/10 dark:bg-slate-800/20 rounded-2xl backdrop-blur-sm border border-white/20 dark:border-slate-700/20"
+            >
+              <div class="text-3xl sm:text-4xl font-bold text-primary-500">
+                {{ yearsOfExperience }}+
+              </div>
+              <div class="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-medium">
+                Years Experience
+              </div>
             </div>
-            <div class="space-y-2 sm:space-y-3 p-4 sm:p-6 bg-white/10 dark:bg-slate-800/20 rounded-2xl backdrop-blur-sm border border-white/20 dark:border-slate-700/20">
-              <div class="text-3xl sm:text-4xl font-bold text-primary-500">3</div>
-              <div class="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-medium">Apps Shipped</div>
+            <div
+              class="space-y-2 sm:space-y-3 p-4 sm:p-6 bg-white/10 dark:bg-slate-800/20 rounded-2xl backdrop-blur-sm border border-white/20 dark:border-slate-700/20"
+            >
+              <div class="text-3xl sm:text-4xl font-bold text-primary-500">4</div>
+              <div class="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-medium">
+                Apps Shipped
+              </div>
             </div>
-            <div class="space-y-2 sm:space-y-3 p-4 sm:p-6 bg-white/10 dark:bg-slate-800/20 rounded-2xl backdrop-blur-sm border border-white/20 dark:border-slate-700/20">
+            <div
+              class="space-y-2 sm:space-y-3 p-4 sm:p-6 bg-white/10 dark:bg-slate-800/20 rounded-2xl backdrop-blur-sm border border-white/20 dark:border-slate-700/20"
+            >
               <div class="text-3xl sm:text-4xl font-bold text-primary-500">AI</div>
-              <div class="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-medium">Native Builder</div>
+              <div class="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-medium">
+                Native Builder
+              </div>
             </div>
           </div>
         </div>
@@ -86,12 +118,16 @@
       <!-- Philosophy Section -->
       <div class="text-center mb-20">
         <div class="max-w-4xl mx-auto space-y-8">
-          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">My Philosophy</h2>
-          <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-300 leading-relaxed font-light">
-            AI should be useful, private, secure and accountable — not just impressive in a demo.
-            I build local-first systems that keep users in control of their data, with guardrails and
-            evals baked in, and I care about owning a product end to end: from inference and retrieval
-            to security, licensing and notarised distribution.
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
+            My Philosophy
+          </h2>
+          <p
+            class="text-xl md:text-2xl text-slate-600 dark:text-slate-300 leading-relaxed font-light"
+          >
+            AI should be useful, private, secure and accountable — not just impressive in a demo. I
+            build local-first systems that keep users in control of their data, with guardrails and
+            evals baked in, and I care about owning a product end to end: from inference and
+            retrieval to security, licensing and notarised distribution.
           </p>
         </div>
       </div>
@@ -105,7 +141,7 @@
           <FileText class="w-6 h-6" />
           <span>View My Resume</span>
         </button>
-        
+
         <button
           @click="changeSelection('projects')"
           class="btn-secondary flex items-center space-x-3 text-lg px-8 py-4 transform hover:scale-105 transition-all duration-300"
@@ -126,8 +162,7 @@ import type { ResumeSelection } from '@/types/resume'
 
 const resumeStore = useResumeStore()
 
-// Fixed to match resume framing ("7+ years shipping enterprise web applications").
-const yearsOfExperience = computed(() => 7)
+const yearsOfExperience = computed(() => new Date().getFullYear() - 2018)
 
 const coreSkills = [
   { name: 'AI Engineering', icon: Cpu },

@@ -27,7 +27,7 @@ export type AppProject = {
   name: string
   tagline: string
   description: string
-  logo: string
+  logo?: string
   year: string
   badge?: string
   tools: string[]

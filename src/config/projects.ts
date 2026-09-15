@@ -1,10 +1,22 @@
 import altaflipLogo from '@/assets/images/apps/altaflip.png'
 import dreamlusiveLogo from '@/assets/images/apps/dreamlusive.png'
+import peelmealLogo from '@/assets/images/apps/peelmeal.png'
 import tickmeekLogo from '@/assets/images/apps/tickmeek.png'
 import type { AppProject, OpenSourceProject } from '@/types/project'
 
 // Personal mobile apps — solo-built and shipped end to end (design, dev, ASO, marketing, monetisation).
 export const apps: AppProject[] = [
+  {
+    name: 'Peelmeal',
+    tagline: 'AI-assisted meal planning & guided cooking',
+    description:
+      'A recipe and meal-planning app with recipe-link import, AI recipe generation, merged shopping lists, guided cook mode and live serving-size scaling.',
+    logo: peelmealLogo,
+    year: '2026',
+    badge: 'AI',
+    tools: ['React Native', 'TypeScript', 'AI / LLMs', 'Recipe Import', 'Meal Planning'],
+    links: []
+  },
   {
     name: 'Altaflip',
     tagline: 'Sauna, cold-plunge & contrast-therapy tracker',
@@ -14,8 +26,12 @@ export const apps: AppProject[] = [
     year: '2025',
     tools: ['React Native', 'Expo', 'TypeScript', 'HealthKit', 'Live Activities', 'Firebase'],
     links: [
+      { url: 'https://altaflip.com', text: 'Website' },
       { url: 'https://apps.apple.com/app/id6756031717', text: 'App Store' },
-      { url: 'https://play.google.com/store/apps/details?id=com.jasuplix.altaflip', text: 'Google Play' }
+      {
+        url: 'https://play.google.com/store/apps/details?id=com.jasuplix.altaflip',
+        text: 'Google Play'
+      }
     ]
   },
   {
@@ -28,8 +44,12 @@ export const apps: AppProject[] = [
     badge: 'AI',
     tools: ['React Native', 'Expo', 'TypeScript', 'AI / LLMs', 'Speech-to-Text', 'Firebase'],
     links: [
+      { url: 'https://dreamlusive.com', text: 'Website' },
       { url: 'https://apps.apple.com/app/id6753315857', text: 'App Store' },
-      { url: 'https://play.google.com/store/apps/details?id=com.jasuplix.dreamlusive', text: 'Google Play' }
+      {
+        url: 'https://play.google.com/store/apps/details?id=com.jasuplix.dreamlusive',
+        text: 'Google Play'
+      }
     ]
   },
   {
@@ -41,8 +61,12 @@ export const apps: AppProject[] = [
     year: '2025',
     tools: ['React Native', 'TypeScript', 'SQLite', 'Firebase', 'Offline-First'],
     links: [
+      { url: 'https://tickmeek.com', text: 'Website' },
       { url: 'https://apps.apple.com/us/app/tickmeek/id6743649903', text: 'App Store' },
-      { url: 'https://play.google.com/store/apps/details?id=com.zenzero.tickado', text: 'Google Play' }
+      {
+        url: 'https://play.google.com/store/apps/details?id=com.zenzero.tickado',
+        text: 'Google Play'
+      }
     ]
   }
 ]
@@ -78,17 +102,32 @@ export const openSource: OpenSourceProject[] = [
   },
   {
     title: 'AI Protector',
-    tagline: 'AI DLP browser-extension & guardrails platform',
+    tagline: 'Self-hosted AI prompt-DLP browser extension',
     description:
-      'Productized an open-source LLM security engine into a browser-extension DLP platform protecting employees using ChatGPT, Claude, Gemini and Copilot — prompts are intercepted and scanned locally before sensitive data leaves the browser.',
+      'Adapted an open-source LLM security engine into a self-hosted browser workflow that scans ChatGPT and Claude prompts for PII, secrets and policy risks before submission.',
     year: '2026',
-    tools: ['WXT', 'Vue', 'TypeScript', 'Python', 'FastAPI', 'Redis', 'Docker', 'AI Guardrails'],
-    highlights: [
-      'Built the extension foundation with prompt interception, scan-relay flow, and warning/block UI for risky AI-tool usage.',
-      'Added multi-tenant SaaS foundations: tenant/seat models, an activation endpoint, Redis activation cache, scan-auth enforcement and tenancy-correctness tests.',
-      'Produced product strategy via ADRs and research covering Chrome Web Store review, SOC 2 readiness, pricing, infrastructure and go-to-market.'
+    tools: [
+      'WXT',
+      'TypeScript',
+      'Bun',
+      'Python',
+      'FastAPI',
+      'Presidio',
+      'Docker',
+      'PostgreSQL',
+      'Redis'
     ],
-    links: [{ url: 'https://github.com/jakubsuplicki/ai-protector-web-extension', text: 'GitHub' }]
+    highlights: [
+      'Built a WXT and TypeScript Chromium extension to intercept and scan ChatGPT and Claude prompts before submission.',
+      'Implemented FastAPI scanning, PostgreSQL policies and logs, Redis caching and Presidio PII detection.',
+      'Added configurable warning and block modes with Bun test coverage for prompt-risk workflows.'
+    ],
+    links: [
+      {
+        url: 'https://github.com/jakubsuplicki/ai-protector-web-extension',
+        text: 'jakubsuplicki/ai-protector-web-extension'
+      }
+    ]
   },
   {
     title: 'DeepBind',
@@ -123,7 +162,16 @@ export const openSource: OpenSourceProject[] = [
     description:
       'A computer-vision pipeline that extracts individual garments from product photos, classifies them, analyses their dominant colours and matches them to a 12-season colour-analysis system for personalised recommendations.',
     year: '2025',
-    tools: ['Python', 'FastAPI', 'Grounding DINO', 'SAM 2.1', 'DeepSeek', 'Google Vision', 'PostgreSQL / Supabase', 'CIELAB'],
+    tools: [
+      'Python',
+      'FastAPI',
+      'Grounding DINO',
+      'SAM 2.1',
+      'DeepSeek',
+      'Google Vision',
+      'PostgreSQL / Supabase',
+      'CIELAB'
+    ],
     highlights: [
       'Built an automated ingest pipeline that detects and segments clothing from affiliate product feeds using Grounding DINO + SAM 2.1, with transparent-background garment extraction.',
       'Implemented a 12-season professional colour-analysis system with HSV/CIELAB colour-space matching to map products to personalised palettes.',
@@ -256,7 +304,17 @@ export const projects = [
       'An automated system that connects with the AroFlo CRM through its API to pre-fetch relevant information and quickly generate job breakdowns, integrating CRM and accounting via AWS.',
     tools: {
       title: 'Tools',
-      stack: ['Vue.js', 'Node.js', 'TypeScript', 'Express', 'AWS', 'Nginx', 'RESTful API', 'JWT', 'AroFlo API']
+      stack: [
+        'Vue.js',
+        'Node.js',
+        'TypeScript',
+        'Express',
+        'AWS',
+        'Nginx',
+        'RESTful API',
+        'JWT',
+        'AroFlo API'
+      ]
     },
     achievements: {
       title: 'Achievements',
@@ -271,7 +329,19 @@ export const projects = [
       'A Google Places–powered bookings app connecting to the AroFlo CRM through its API, letting bookings be completed without accessing the CRM directly — via admin access or a uniquely generated URL sent to a client.',
     tools: {
       title: 'Tools',
-      stack: ['Vue.js', 'Node.js', 'TypeScript', 'Express', 'AWS', 'Nginx', 'RESTful API', 'PWA', 'JWT', 'Google Places API', 'AroFlo API']
+      stack: [
+        'Vue.js',
+        'Node.js',
+        'TypeScript',
+        'Express',
+        'AWS',
+        'Nginx',
+        'RESTful API',
+        'PWA',
+        'JWT',
+        'Google Places API',
+        'AroFlo API'
+      ]
     },
     achievements: {
       title: 'Achievements',
@@ -286,7 +356,20 @@ export const projects = [
       'A dedicated server of internal API endpoints callable from across the company’s applications, exposing reusable integrations with AroFlo CRM, GroupMe and Google APIs.',
     tools: {
       title: 'Tools',
-      stack: ['Node.js', 'TypeScript', 'Express', 'AWS EC2', 'AWS S3', 'Nginx', 'RESTful API', 'JWT', 'Google Scripts', 'AroFlo API', 'GroupMe API', 'Google APIs']
+      stack: [
+        'Node.js',
+        'TypeScript',
+        'Express',
+        'AWS EC2',
+        'AWS S3',
+        'Nginx',
+        'RESTful API',
+        'JWT',
+        'Google Scripts',
+        'AroFlo API',
+        'GroupMe API',
+        'Google APIs'
+      ]
     },
     achievements: {
       title: 'Achievements',

@@ -1,240 +1,120 @@
-import transcriptImage from '@/assets/images/transcript-min.jpg'
-import englishScoreImage from '@/assets/images/english-min.jpg'
-
 export const resumeSkills = [
   {
-    title: 'AI & Data',
-    icon: ['fas', 'robot'],
+    title: 'Full Stack',
     skills: [
-      'Local LLMs (Ollama)',
-      'MCP',
-      'Retrieval / RAG',
-      'Graph Memory',
-      'Embeddings & Reranking',
-      'Prompt-Injection & Jailbreak Detection',
-      'AI DLP / Guardrails',
-      'Agentic Workflows'
-    ]
-  },
-  {
-    title: 'Languages',
-    icon: ['fas', 'code'],
-    skills: ['TypeScript', 'JavaScript', 'Python', 'Rust', 'PHP', 'HTML5', 'CSS3', 'SQL', 'YAML']
-  },
-  {
-    title: 'Frontend',
-    icon: ['fas', 'code'],
-    skills: [
-      'Vue.js',
-      'Vuex',
-      'Pinia',
-      'Nuxt.js',
+      'TypeScript',
+      'JavaScript',
+      'Node.js',
       'React',
       'React Native',
-      'Redux',
-      'jQuery',
-      'SCSS',
-      'PrimeVUE',
-      'Chakra',
-      'Tailwind',
-      'MaterialUI',
-      'Bootstrap'
+      'Vue',
+      'Nuxt',
+      'Python',
+      'FastAPI'
     ]
   },
   {
-    title: 'Backend',
-    icon: ['fas', 'code'],
+    title: 'AI Systems',
     skills: [
-      'Node.js',
-      'Express',
-      'Fastify',
-      'Python / FastAPI',
-      'Rust / Tauri',
-      'SST',
-      'Pulumi',
-      'Docker',
-      'Nginx',
-      'GraphQL',
-      'RESTful API',
-      'Kafka / Confluent',
-      'AWS SDK',
-      'Firebase',
-      'AWS (Lambda, S3, EC2, Step Functions, SNS/SQS, X-Ray, IAM, Route53)'
+      'Local LLMs',
+      'RAG',
+      'Embeddings',
+      'Reranking',
+      'Knowledge Graphs',
+      'MCP',
+      'Agent Workflows'
     ]
   },
   {
-    title: 'Database Systems',
-    icon: ['fas', 'database'],
-    skills: ['MongoDB', 'Mongoose', 'MySQL', 'Oracle SQL', 'DynamoDB', 'PostgreSQL', 'Sequelize', 'SQLite']
+    title: 'Cloud & Data',
+    skills: ['AWS', 'Docker', 'PostgreSQL', 'MongoDB', 'DynamoDB', 'SQLite / FTS5', 'Firebase']
   },
   {
-    title: 'Development Tools',
-    icon: ['fas', 'tools'],
+    title: 'Delivery',
     skills: [
-      'FileZilla',
-      'Git & GitHub',
-      'Bitbucket',
-      'MongoDB Atlas',
-      'Postman',
-      'PWA',
-      'Websockets',
-      'Nx',
-      'Service Workers',
-      'Travis CI',
-      'Webpack',
-      'WordPress',
-      'Docker',
-      'Jira',
-      'Linear'
-    ]
-  },
-  {
-    title: 'Testing',
-    icon: ['fas', 'cube'],
-    skills: ['System integration', 'User acceptance', 'VR Testing', 'Jest', 'Unit Testing']
-  },
-  {
-    title: 'Development Skills',
-    icon: ['fas', 'layer-group'],
-    skills: [
-      'REST API Design',
-      'CI/CD',
+      'Serverless Architecture',
+      'Hexagonal Architecture',
       'Monorepos',
-      'Serverless',
-      'Infrastructure as Code',
-      'Design (UI, UX, Prototyping)',
-      'Relational Database System Development',
-      'Non-Relational Database System Development'
+      'CI/CD',
+      'Jest',
+      'Vitest',
+      'Technical Leadership'
     ]
-  },
-  {
-    title: 'Visual Modelling',
-    icon: ['fas', 'project-diagram'],
-    skills: [
-      'Activity Diagram',
-      'Workflow Diagram',
-      'Sitemap Diagram',
-      'Process Flow Diagram',
-      'SWOT Analysis',
-      'Flow Chart',
-      'Use Case Diagram'
-    ]
-  },
-  {
-    title: 'Operating Systems',
-    icon: ['fas', 'desktop'],
-    skills: ['macOS', 'Windows', 'Linux (Ubuntu)']
   }
 ]
+
 export const professionalExperience = [
   {
-    title: 'Senior Full-Stack & AI Engineer',
-    location: 'Independent / Open-Source AI',
-    date: '2026 - Present',
-    icon: ['fas', 'robot']
-  },
-  {
-    title: 'Senior Full-Stack Developer (Contract)',
-    location: 'TAFE NSW',
-    date: 'August 2024 - Present',
-    icon: ['fas', 'keyboard']
-  },
-  {
-    title: 'Founder & App Developer',
-    location: 'Independent',
-    date: 'May 2025 - Present',
-    icon: ['fas', 'rocket']
+    title: 'Senior Full-Stack Developer',
+    location: 'TAFE NSW · Contract',
+    date: 'Aug 2024 – Present · Oct 2022 – Sep 2023',
+    icon: ['fas', 'keyboard'],
+    details: [
+      'Led delivery and launch of a system-guided student-enrolment platform using Nuxt 3, Vue 3, TypeScript and Node.js; delivered to deadline.',
+      'Migrated legacy components into the new platform using modern design patterns and maintainable architecture.',
+      'Drove architecture, coding standards and automated testing across legacy and new systems.'
+    ]
   },
   {
     title: 'Technical Lead',
-    location: 'Navitas',
-    date: 'February 2024 - July 2024',
-    icon: ['fas', 'users']
+    location: 'Navitas · Joined as Integrations Developer',
+    date: 'Oct 2023 – Jul 2024',
+    icon: ['fas', 'briefcase'],
+    details: [
+      'Led Project Athena’s migration to serverless, monorepo and hexagonal architecture for organisation-wide business-process integrations.',
+      'Delivered integrations with Salesforce, StudyLink and Navigate; coached engineers on serverless architecture and technical leadership.',
+      'Planned complex technical work and communicated delivery risks, timelines and resource trade-offs to stakeholders.'
+    ]
   },
   {
-    title: 'Integrations Developer',
-    location: 'Navitas',
-    date: 'October 2023 - February 2024',
-    icon: ['fas', 'code-branch']
+    title: 'Full-Stack Developer',
+    location: 'Seven West Media · News platforms and serverless microservices',
+    date: 'Oct 2021 – Oct 2022',
+    icon: ['fas', 'keyboard'],
+    details: [
+      'Built cloud-native features and microservices in a monorepo serving The West Australian, PerthNow, 7NEWS and regional mastheads.',
+      'Delivered features and improved scoring efficiency for The Game, a React-based AFL and cricket tipping platform; supported production stability.'
+    ]
   },
   {
-    title: 'Senior Full Stack Developer (Contract)',
-    location: 'TAFE NSW',
-    date: 'October 2022 - September 2023',
-    icon: ['fas', 'keyboard']
-  },
-  {
-    title: 'Full Stack Developer (Full Time)',
-    location: 'Seven West Media',
-    date: 'October 2021 - October 2022',
-    icon: ['fas', 'keyboard']
-  },
-  {
-    title: 'Senior Full Stack Developer (Contract)',
-    location: 'Your Local Plumbing Group Melbourne',
-    date: 'October 2021 - February 2023',
-    icon: ['fas', 'keyboard']
-  },
-  {
-    title: 'Full Stack Developer (Full Time)',
-    location: 'Your Local Plumbing Group Melbourne',
-    date: 'November 2018 - September 2021',
-    icon: ['fas', 'keyboard']
-  },
-  {
-    title: 'Junior Full Stack Developer (Full Time)',
-    location: 'Your Local Plumbing Group Melbourne',
-    date: 'July 2018 - October 2018',
-    icon: ['fas', 'keyboard']
+    title: 'Full-Stack Developer',
+    location: 'Your Local Plumbing Group · Joined as Junior Full-Stack Developer',
+    date: 'Jul 2018 – Oct 2021',
+    icon: ['fas', 'keyboard'],
+    details: [
+      'Built iSubbie, a Nuxt, Vue and Node.js job-bidding PWA with payments, chat, notifications and CRM/accounting integrations; delivered on time and on budget.',
+      'Automated job breakdowns via AWS and CRM/accounting integrations; built a Google Places bookings app that increased booking speed by approximately 70%.',
+      'Defined CI/CD strategy and ran stakeholder workshops to translate operational needs into delivered applications.'
+    ]
   }
 ]
+
+export const independentProductEngineering = [
+  {
+    title: 'Independent Product Engineer',
+    location: 'Personal Products',
+    date: '2025 – 2026',
+    icon: ['fas', 'briefcase'],
+    details: [
+      'Solo-built and shipped four mobile apps, owning product design, development, launch and monetisation.',
+      'Launched Peelmeal, Altaflip, Dreamlusive and Tickmeek across recipe planning, wellness analytics, applied AI and productivity.'
+    ]
+  }
+]
+
 export const education = [
+  {
+    title: 'Bachelor of Information Technology · High Distinction',
+    location: 'Melbourne Polytechnic',
+    date: '2015 – 2018',
+    icon: ['fas', 'user-graduate']
+  },
   {
     title: 'Graduate Diploma, Management',
     location: 'Brighton College',
-    date: 'October 2020 - October 2021',
-    icon: ['fas', 'user-graduate']
-  },
-  {
-    title: 'Bachelor of Information Technology',
-    location: 'Melbourne Polytechnic',
-    date: 'July 2015 - July 2018',
+    date: '2020 – 2021',
     icon: ['fas', 'user-graduate']
   }
 ]
 
-export const universityProjects = [
-  {
-    title: 'IMgateway Consumer Application',
-    location: 'Melbourne Polytechnic',
-    date: 'July 2017 - May 2018',
-    icon: ['fas', 'laptop-medical']
-  }
-]
-
-export const personalAttributes = [
-  { title: 'Time Management', icon: ['fas', 'stopwatch'] },
-  { title: 'Eye for Detail', icon: ['fas', 'eye'] },
-  { title: 'Self-motivated', icon: ['fas', 'hand-sparkles'] },
-  { title: 'Punctuality', icon: ['fas', 'business-time'] }
-]
-
-export const completedCourses = [
-  'Vue JS 2 - The complete Guide (incl. Vue Router & Vuex)',
-  'The Complete Node.js Developer Course (3rd Edition)',
-  'The Complete JavaScript Course 2019: Build Real Projects!',
-  'Nuxt.js - Vue.js on Steroids',
-  "ES6 Javascript: The Complete Developer's Guide",
-  'Advanced CSS and Sass: Flexbox, Grid, Animations and More!',
-  'The Complete React Native + Hooks Course [2019 Edition]'
-]
-
-export const academicAchievements = {
-  image: transcriptImage,
-  alt: 'transcript'
-}
-
-export const englishScore = {
-  image: englishScoreImage,
-  alt: 'english score'
-}
+export const spokenLanguages = ['English', 'Polish']
